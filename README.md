@@ -2,6 +2,8 @@
 
 ## JavaScript
 
+### Language Standard Internal
+
 ### Design Patterns
 
 * Constructor Pattern
@@ -20,12 +22,24 @@
 
 ## CSS
 
+### Language Standard Internal
+
+### Spots
+
 * [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
 
 ## Tools
+
+### Ideas
 
 ### Bundle
 
 * webpack
 
-Joe Jiang
+## LICENSE
+
+Apache 2.0
+
+## Contact
+
+Joe Jiang, [Email](mailto:hijiangtao@gmail.com)
