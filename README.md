@@ -30,6 +30,8 @@
 
 ## Tools
 
+* [Color Picker](http://colorizer.org/)
+
 ### Ideas
 
 ### Bundle
