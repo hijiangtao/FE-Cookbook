@@ -36,6 +36,10 @@
 * Boolean 类型: true/false;
 * Number 类型: 使用 IEEE754 格式来表示整数或者浮点数值;
 
+## HTML
+
+* [World Wide Web](https://en.wikipedia.org/wiki/World_Wide_Web)
+
 ## CSS
 
 ### Language Standard Internal
@@ -49,7 +53,9 @@
 ### Web Related
 
 * [HTTP协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
-* []()
+* [Color Picker](http://colorizer.org/)
+
+### Ideas
 
 ### Bundle
 
