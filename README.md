@@ -35,6 +35,12 @@
 * Null 类型: 空对象指针;
 * Boolean 类型: true/false;
 * Number 类型: 使用 IEEE754 格式来表示整数或者浮点数值;
+* String 类型;
+* Object 类型;
+
+### ECMAScript 操作符, 语句与函数
+
+
 
 ## HTML
 
