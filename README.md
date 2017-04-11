@@ -40,7 +40,29 @@
 
 ### ECMAScript 操作符, 语句与函数
 
+* 在函数内部可以通过 arguments 对象来访问参数数组;
+* ECMAScript 中没有函数重载的概念;
+* 
 
+### 变量,作用域和内存问题
+
+* 访问变量有按值和按引用两种方式,而参数只能按值传递;实际上,当在函数内部重写传入的对象时,这个变量引用的就是一个局部变量了;
+* instanceof 操作符: 用于检测引用类型值 (与 typeof 区分);
+
+> Using typeof, you get a string representation of the object type. Using instanceof, you are comparing the type, specifically if the property of a constructor is in the objects prototype chain.
+
+* 用 with 语句或者 try-catch 的 catch 块延长作用域链;
+* JavaScript 具有自动垃圾收集机制,垃圾收集策略包括标记清除和引用计数两种方式;
+
+### 引用类型
+
+* Object 类型
+* Array 类型: 数组的 length 属性并不是只读的; 数组的栈方法和队列方法: push() / pop() / shift() / unshift(); slice() 方法并不会影响原始数组;
+* Date 类型
+* RegExp 类型
+* Function 类型: 由于函数是对象,因此函数名称实际上也是一个指向函数对象的指针,不会与某个函数绑定; 函数声明与函数表达式; 作为值的函数; this 尹永德是函数据以执行的环境对象;
+* 基本包装类型
+* 单体内置对象
 
 ## HTML
 
