@@ -40,29 +40,125 @@
 
 ### ECMAScript 操作符, 语句与函数
 
-* 在函数内部可以通过 arguments 对象来访问参数数组;
-* ECMAScript 中没有函数重载的概念;
+* 在函数内部可以通过 arguments 对象来访问参数数组
+* ECMAScript 中没有函数重载的概念
 * 
 
 ### 变量,作用域和内存问题
 
-* 访问变量有按值和按引用两种方式,而参数只能按值传递;实际上,当在函数内部重写传入的对象时,这个变量引用的就是一个局部变量了;
-* instanceof 操作符: 用于检测引用类型值 (与 typeof 区分);
+* 访问变量有按值和按引用两种方式,而参数只能按值传递;实际上,当在函数内部重写传入的对象时,这个变量引用的就是一个局部变量了
+* instanceof 操作符: 用于检测引用类型值 (与 typeof 区分)
 
 > Using typeof, you get a string representation of the object type. Using instanceof, you are comparing the type, specifically if the property of a constructor is in the objects prototype chain.
 
-* 用 with 语句或者 try-catch 的 catch 块延长作用域链;
-* JavaScript 具有自动垃圾收集机制,垃圾收集策略包括标记清除和引用计数两种方式;
+* 用 with 语句或者 try-catch 的 catch 块延长作用域链
+* JavaScript 具有自动垃圾收集机制,垃圾收集策略包括标记清除和引用计数两种方式
 
 ### 引用类型
 
 * Object 类型
-* Array 类型: 数组的 length 属性并不是只读的; 数组的栈方法和队列方法: push() / pop() / shift() / unshift(); slice() 方法并不会影响原始数组;
+* Array 类型: 数组的 length 属性并不是只读的; 数组的栈方法和队列方法: push() / pop() / shift() / unshift(); slice() 方法并不会影响原始数组
 * Date 类型
 * RegExp 类型
-* Function 类型: 由于函数是对象,因此函数名称实际上也是一个指向函数对象的指针,不会与某个函数绑定; 函数声明与函数表达式; 作为值的函数; this 尹永德是函数据以执行的环境对象;
-* 基本包装类型
-* 单体内置对象
+* Function 类型: 由于函数是对象,因此函数名称实际上也是一个指向函数对象的指针,不会与某个函数绑定; 函数声明与函数表达式; 作为值的函数; this 尹永德是函数据以执行的环境对象
+* 基本包装类型: 引用类型与基本包装类型的主要区别就是对象的生存期
+* 单体内置对象: 在所有代码执行之前,作用域中就已经存在两个内置对象: Global 和 Math; 全局变量核函数都是 Global 对象的属性
+
+### 面向对象的程序设计
+
+* 访问器属性包含一对 getter 和 setter 函数
+* 原型对象
+* 属性的可枚举性和所有权
+
+<table>
+ <thead>
+  <tr>
+   <th>&nbsp;</th>
+   <th>in</th>
+   <th>for..in</th>
+   <th>hasOwnProperty</th>
+   <th>propertyIsEnumerable</th>
+   <th>在 Object.keys 返回结果中</th>
+   <th>在 Object.getOwnPropertyNames 返回结果中</th>
+   <th>在 Object.getOwnPropertyDescriptors 返回结果中</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>可枚举自身属性</th>
+   <td>true</td>
+   <td>true</td>
+   <td>true</td>
+   <td>true</td>
+   <td>true</td>
+   <td>true</td>
+   <td>true</td>
+  </tr>
+  <tr>
+   <th>不可枚举自身属性</th>
+   <td>true</td>
+   <td>false</td>
+   <td>true</td>
+   <td>false</td>
+   <td>false</td>
+   <td>true</td>
+   <td>true</td>
+  </tr>
+  <tr>
+   <th>可枚举继承属性</th>
+   <td>true</td>
+   <td>true</td>
+   <td>false</td>
+   <td>false</td>
+   <td>false</td>
+   <td>false</td>
+   <td>false</td>
+  </tr>
+  <tr>
+   <th>不可枚举继承属性</th>
+   <td>true</td>
+   <td>false</td>
+   <td>false</td>
+   <td>false</td>
+   <td>false</td>
+   <td>false</td>
+   <td>false</td>
+  </tr>
+  <tr>
+   <th>包含键为 Symbols &nbsp;类型的属性</th>
+   <td>true</td>
+   <td>false</td>
+   <td>true</td>
+   <td>true</td>
+   <td>false</td>
+   <td>false</td>
+   <td>true</td>
+  </tr>
+ </tbody>
+</table>
+
+* 用字面量重写原型对象的方法和 `.prototype` 相比,除 constructor 属性不再指向对象外,其余结果均相同
+* 原型的动态性: 实例中的指针仅指向原型,而不指向构造函数
+
+```
+function Person() {
+}
+
+var friend = new Person();
+
+Person.prototype = {
+    constructor: Person,
+    name: 'Nicholas',
+    sayName: function() {
+        alert(this.name);
+    }
+};
+
+friend.sayName(); //error
+```
+
+* 稳妥对象
+* 继承
 
 ## HTML
 
