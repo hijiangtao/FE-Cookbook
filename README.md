@@ -20,6 +20,8 @@
 * Decorator Pattern
 * Flyweight Pattern
 
+A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](https://github.com/tcorral/Design-Patterns-in-Javascript).
+
 ### JavaScript 实现
 
 一个完整的 JavaScript 实现由下列三个不同的部分组成:
@@ -171,7 +173,22 @@ friend.sayName(); //error
 
 ### BOM
 
+* window 对象: 表示浏览器的一个实例. 全局变量不能通过 delete 操作符删除,而直接在 window 对象上的定义的属性可以; 一般认为,使用超时调用来模拟间歇调用是一种最佳模式,由于后一个间歇调用可能会在前一个间歇调用结束之前启动,所以最好不要使用间歇调用; 系统对话框 `alert(), confirm(), prompt()` 都是同步和模态的; 
+* location 对象: 提供了与当前窗口中加载的文档有关的信息; 
+* navigator 对象: 识别客户端浏览器的事实标准;
+* screen 对象: 表明客户端的能力;
+* history 对象: 保存着用户上网的历史记录;
 
+### 客户端检测
+
+* 能力检测: 在可能的情况下,要尽量使用 typeof 进行能力检测;
+* 怪癖检测: 识别浏览器的特殊行为 (bug);
+* 用户代理检测: 能够检测出浏览器所用的呈现引擎,所在平台,包括移动设备以及游戏系统; 识别程序引擎的顺序应该为 Opera, WebKit, KHTML, Gecko, IE;
+
+### DOM
+
+* 虽然可以通过方括号语法来访问 NodeList 的值,而且这个对象也有 length 属性,但是它并不是 Array 的实例;
+* 
 
 ## HTML
 
@@ -191,6 +208,7 @@ friend.sayName(); //error
 
 * [HTTP协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
 * [Color Picker](http://colorizer.org/)
+* [Simple Icons](https://simpleicons.org/), SVG icons for popular brands
 
 ### Ideas
 
