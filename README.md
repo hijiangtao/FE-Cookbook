@@ -185,10 +185,26 @@ friend.sayName(); //error
 * 怪癖检测: 识别浏览器的特殊行为 (bug);
 * 用户代理检测: 能够检测出浏览器所用的呈现引擎,所在平台,包括移动设备以及游戏系统; 识别程序引擎的顺序应该为 Opera, WebKit, KHTML, Gecko, IE;
 
-### DOM
+### DOM 与 DOM 扩展
 
 * 虽然可以通过方括号语法来访问 NodeList 的值,而且这个对象也有 length 属性,但是它并不是 Array 的实例;
-* 
+* Document: nodeType 值为9, 表示文档;
+* Element: nodeType 值为1, 用于表示 XML 或者 HTML 元素;
+* Text: nodeType 值为3, 包含可以照字面解释的纯文本内容;
+* Comment: nodeType 值为8, 表示注释;
+* CDATASelection: nodeType 值为4, 表示 CDATA 区域;
+* DocumentType: nodeType 值为10, 包含与文档的 doctype 有关的所有信息;
+* DocumentFragment: nodeType 值为11;
+* Attr: nodeType 值为2;
+* NodeList 对象是动态的,这意味着每次访问 NodeList 对象,都会运行一次查询;
+* Selectors API Level 1 的选择符核心两个方法: querySelector(), querySelectorAll();
+* Selectors API Level 2 为 Element 新增的一个方法: matchesSelector(), 暂且只有实验性的实现; 
+* HTML5 与 DOM 节点相关的内容: [getElementsByClassName()](https://developer.mozilla.org/en/docs/Web/API/Document/getElementsByClassName), [classList](https://developer.mozilla.org/en/docs/Web/API/Element/classList), 焦点管理, HTMLDocument 的变化, 字符集属性, 自定义数据属性, 插入标记, [scrollIntoVIew()](https://developer.mozilla.org/en/docs/Web/API/Element/scrollIntoView)
+* 专有扩展包括: 文档模式
+
+### DOM2 & DOM3
+
+* 遍历: DOM2 级遍历和范围定义了两个用于辅助完成顺序遍历 DOM 结构的类型: NodeIterator(), TreeWalker()
 
 ## HTML
 
