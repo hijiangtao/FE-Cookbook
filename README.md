@@ -213,7 +213,7 @@ friend.sayName(); //error
 * DOM2 级事件中定义了两个方法: addEventListener(), removeEventListener();
 * DOM3 级事件规定了以下几类事件: UI 事件, 焦点事件, 鼠标事件, 滚轮事件, 文本事件, 键盘事件, 合成事件, 变动事件, 变动名称事件;
 * 键盘与文本事件: 对数字字母字符键,keyCode 属性的值与 ASCII 码中对应小写字母或者数字的编码相同;
-
+* HTML5 事件: contextmenu 事件(上下文菜单)
 
 
 ## HTML
