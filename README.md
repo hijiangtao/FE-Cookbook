@@ -212,9 +212,16 @@ friend.sayName(); //error
 * DOM0 中每个元素都有自己的事件处理程序属性,但对每个事件只支持一个事件处理程序;
 * DOM2 级事件中定义了两个方法: addEventListener(), removeEventListener();
 * DOM3 级事件规定了以下几类事件: UI 事件, 焦点事件, 鼠标事件, 滚轮事件, 文本事件, 键盘事件, 合成事件, 变动事件, 变动名称事件;
+* DOM2 级事件处理程序方法接收三个参数,最后一个值为布尔值参数,若为true表示在捕获阶段调用事件处理程序;如果是false表示在冒泡阶段调用事件处理程序;
 * 键盘与文本事件: 对数字字母字符键,keyCode 属性的值与 ASCII 码中对应小写字母或者数字的编码相同;
-* HTML5 事件: contextmenu 事件(上下文菜单)
+* HTML5 事件: contextmenu 事件(上下文菜单,冒泡), beforeunload 事件, DOMContentLoaded 事件, readystatechange 事件, pageshow / pagehide 事件, hashchange 事件;
+* 设备事件: orientationchange 事件, MozOrientation 事件(实验性 API), deviceorientation 事件, devicemotion 事件;
+* 触摸与手势事件: 在触摸屏幕上的元素时,事件的发生顺序为: touchstart, mouseover, mousemove(一次), mousedown, mouseup, click, touchend;
+* 事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件;
 
+### 表单脚本
+
+* 
 
 ## HTML
 
