@@ -2,26 +2,6 @@
 
 ## JavaScript
 
-### Language Standard Internal
-
-### Design Patterns
-
-* Constructor Pattern
-* Module Pattern
-* Revealing Module Pattern
-* Singleton Pattern
-* Observer Pattern
-* Mediator Pattern
-* Prototype Pattern
-* Command Pattern
-* Facade Pattern
-* Factory Pattern
-* Mixin Pattern
-* Decorator Pattern
-* Flyweight Pattern
-
-A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](https://github.com/tcorral/Design-Patterns-in-Javascript).
-
 ### JavaScript 实现
 
 一个完整的 JavaScript 实现由下列三个不同的部分组成:
@@ -163,6 +143,24 @@ friend.sayName(); //error
 * 接口继承只继承方法签名,而实现继承则继承实际的方法. ECMAScript 只支持实现继承;
 * 继承模式: 原型链; 借用构造函数(超类型构造函数); 组合继承; 原型式继承; 寄生式继承; 寄生组合式继承;
 * 寄生组合式继承,集寄生式继承和组合继承的优点与一身,是实现基于类型继承的最有效的方法;
+
+### Design Patterns
+
+* Constructor Pattern
+* Module Pattern
+* Revealing Module Pattern
+* Singleton Pattern
+* Observer Pattern
+* Mediator Pattern
+* Prototype Pattern
+* Command Pattern
+* Facade Pattern
+* Factory Pattern
+* Mixin Pattern
+* Decorator Pattern
+* Flyweight Pattern
+
+A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](https://github.com/tcorral/Design-Patterns-in-Javascript).
 
 ### 函数表达式
 
