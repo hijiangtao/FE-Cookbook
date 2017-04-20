@@ -219,6 +219,14 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 
 ### 表单脚本
 
+* HTML5 为表单字段新增了一个 autofocus 属性; 在默认情况下,只有表单字段可以获得焦点;
+* 不建议使用标准的 DOM 方法去操作文本框内的值,因为对 value 属性所做的修改不一定会反映在 DOM 中;
+* 过滤输入, 自动切换焦点;
+* HTML5 约束验证 API: 比如 required 属性, 其他输入类型(email, url), 数值范围(min属性, max属性), 输入模式, 检测有效性(checkValidity() 方法, validity 属性), 禁用验证;
+* 选择框的 change 事件只要选中了选项就会被触发;
+
+### 使用 Canvas 绘图
+
 * 
 
 ## HTML
