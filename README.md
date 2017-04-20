@@ -227,7 +227,11 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 
 ### 使用 Canvas 绘图
 
-* 
+* 2D 上下文的两种基本绘图操作是填充和描边 (fillStyle 和 strokeStyle), 这两个属性值可以是字符串,渐变对象或者模式对象,默认值均为"#000000";
+* 矩形: fillRect(), strokeRect(), clearRect();
+* 路径: beginPath();
+* 文本: fillText(), strokeText(), measureText();
+* 变换: ;
 
 ## HTML
 
