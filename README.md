@@ -248,7 +248,12 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
     * 缓冲区: gl.createBuffer(), gl.bindBuffer();
     * 错误: JavaScript 与 WebGL 之间最大的一个区别在于, WebGL 操作一般不会抛出错误; 循环使用 gl.getError() 至 gl.NO_ERROR 找出错误;
     * 着色器: WebGL 中有两种着色器,定点着色器和片段着色器;
-    * 编写着色器: 
+    * 编写着色器 & 编写着色器程序: 使用着色器的关键在于要有字符串形式的 GLSL 程序;
+    * 为着色器传入值 & 调试着色器和程序;
+    * 绘图: WebGL 只能绘制三种形状: 点,线和三角;
+    * 
+
+
 
 
 
