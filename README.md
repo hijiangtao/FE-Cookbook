@@ -231,7 +231,26 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * 矩形: fillRect(), strokeRect(), clearRect();
 * 路径: beginPath();
 * 文本: fillText(), strokeText(), measureText();
-* 变换: ;
+* 变换: 如果你知道将来还要返回某组属性和变换的组合,可以调用 save() 方法;
+* 绘制图像: drawImage();
+* 阴影
+* 渐变: createLinearGradient(), addColorStop(), createRadialGradient();
+* 模式: 重复的图像,可以用来填充或描边图形, createPattern();
+* 使用图像数据: getImageData();
+* 合成: globalAlpha 属性和 globalCompositionOperation 属性;
+* WebGL 是针对 Canvas 的 3D 上下文, WebGL 涉及的复杂计算需要提前知道数值的精度,而标准的 JavaScript 数值无法满足需要,为此 typed arrays (类型化数组)被引入, 其核心是一个名为 ArrayBuffer 的类型;
+* 类型化数组是 WebGL 项目中执行各项操作的重要基础;
+* WebGL 上下文
+    * 常量: 类似于 `gl.COLOR_BUFFER_BIT` 的形式进行访问;
+    * 方法命名
+    * 准备绘图
+    * 视口与坐标: viewport(), 坐标原点的不同;
+    * 缓冲区: gl.createBuffer(), gl.bindBuffer();
+    * 错误: JavaScript 与 WebGL 之间最大的一个区别在于, WebGL 操作一般不会抛出错误; 循环使用 gl.getError() 至 gl.NO_ERROR 找出错误;
+    * 着色器: WebGL 中有两种着色器,定点着色器和片段着色器;
+    * 编写着色器: 
+
+
 
 ## HTML
 
