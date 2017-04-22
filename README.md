@@ -250,12 +250,22 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
     * 着色器: WebGL 中有两种着色器,定点着色器和片段着色器;
     * 编写着色器 & 编写着色器程序: 使用着色器的关键在于要有字符串形式的 GLSL 程序;
     * 为着色器传入值 & 调试着色器和程序;
-    * 绘图: WebGL 只能绘制三种形状: 点,线和三角;
-    * 
+    * 绘图: WebGL 只能绘制三种形状: 点,线和三角 (gl.drawArrays());
+    * 纹理: 创建纹理 gl.createTexture();
+    * 读取像素: readPixels();
 
+### HTML5 脚本编程
 
+* 跨文档消息传递(XDM): 在来自不同域的页面间传递消息;
+* 原生拖放: 为了实现拖放操作时数据交换,dataTransfer 对象有两个主要方法,getData() 和 setData();
+* HTML5 为所有 HTML 元素规定了一个 draggable 属性,表示元素是否可以拖动;
+* 媒体元素: `<audio>` 和 `<video>`,两个元素都有一个 canPlayType() 方法,该方法接受一种格式/编解码器字符串,返回"probably","maybe"或"";
+* 历史状态管理相关函数: `hashchange()`, `pushState()`, `replaceState()`;
 
+### 错误处理与调试
 
+* try-catch 语句: finally 子句一经使用,其代码无论如何都会执行;如果提供 finally 子句,则catch子句就成了可选的;
+* 在遇到 throw 操作符时,代码会立即停止执行;
 
 ## HTML
 
