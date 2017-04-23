@@ -266,6 +266,11 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 
 * try-catch 语句: finally 子句一经使用,其代码无论如何都会执行;如果提供 finally 子句,则catch子句就成了可选的;
 * 在遇到 throw 操作符时,代码会立即停止执行;
+* 常见的错误类型: 类型转换错误,数据类型错误,通信错误;
+* 基本类型的值应该用 typeof 检测,对象的值应该用 instanceof 来检测;
+* URL 中若要查询字符串,请记住要使用 `encodeURIComponent()` 方法;
+* console 具有如下方法: console.log('hello'), console.info('信息'), console.error('错误'), console.warn('警告');
+* 常见的 IE 错误: 在修改尚未加载完成的页面时,就会发生操作中止错误;
 
 ## HTML
 
