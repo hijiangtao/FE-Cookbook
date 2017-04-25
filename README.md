@@ -272,6 +272,30 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * console 具有如下方法: console.log('hello'), console.info('信息'), console.error('错误'), console.warn('警告');
 * 常见的 IE 错误: 在修改尚未加载完成的页面时,就会发生操作中止错误;
 
+### JavaScript, XML 与 E4X
+
+* DOMParser 类型: 用于将 XML 解析为 DOM 类型;
+* XMLSerializer 类型: 将 DOM 文档序列转化为 XML 字符串;
+* 跨浏览器使用 XPath 最好只考虑实现 selectNode() 以及 selectNodes() 两个方法;
+* XSLT 略; E4X 略;
+
+### JSON
+
+* JavaScript 字符串与 JSON 字符串最大的区别在于: JSON 字符串必须使用双引号表示; 另外, JSON 的语法可以表示三种类型的值: 简单值,对象以及数组;
+* JSON 对象有两个方法: stringify() 将 JavaScript 对象序列化为 JSON 字符串, parse() 把 JSON 字符串解析为原生 JavaScript 值;
+* 在序列化 JavaScript 对象时,所有函数及原型成员都会被有意忽略,不体现在结果中.此外,值为 undefined 的任何属性也会被跳过.结果中最终都是值为有效 JSON 数据类型的实例属性;
+* JSON.stringify() 接受另外两个参数来定义过滤器以及 JSON 字符串是否保留缩进,理解序列化内部顺序十分重要;
+* JSON.parse() 接受另一个参数,该参数为函数在每个键值对上调用;
+
+### Ajax 与 Comet
+
+* 原生 XHR 对象: `new XMLHttpRequest()`;
+* 只能向同一个域中使用相同端口和协议的 URL 发送请求,如果 URL 与启动请求的页面有任何差别,都会引发安全错误;
+* XHR 对象的 readyState 属性表示请求/响应过程的当前活动阶段;
+* 在 readystatechange 事件中,使用实际的 XHR 对象实例变量是较为可靠的一种方法;
+* CORS, Cross-origin resource sharing (跨源资源共享),定义了在必须访问跨源资源时浏览器与服务器应该如何沟通;
+* 
+
 ## HTML
 
 * [World Wide Web](https://en.wikipedia.org/wiki/World_Wide_Web)
