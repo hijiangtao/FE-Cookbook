@@ -294,6 +294,24 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * XHR 对象的 readyState 属性表示请求/响应过程的当前活动阶段;
 * 在 readystatechange 事件中,使用实际的 XHR 对象实例变量是较为可靠的一种方法;
 * CORS, Cross-origin resource sharing (跨源资源共享),定义了在必须访问跨源资源时浏览器与服务器应该如何沟通;
+* 跨域资源共享的解决方法包括以下几种:
+    * IE 对 CORS 的实现 (XDR);
+    * 其他浏览器对 CORS 的实现;
+    * Preflighted Requests;
+    * 带凭据的请求;
+    * 其他跨域技术1: 图像 Ping; JSONP; Comet; 服务器发送事件(SSE); Web Sockets;
+* CSRF: 跨站点请求伪造;
+
+### 高级技巧
+
+* 安全的类型检测;
+* 作用域安全的构造函数;
+* 惰性载入函数;
+* 函数绑定;
+* 函数柯里化;
+* 不可扩展对象;
+* 密封的对象;
+* 冻结的对象;
 * 
 
 ## HTML
