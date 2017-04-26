@@ -312,6 +312,21 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * 不可扩展对象;
 * 密封的对象;
 * 冻结的对象;
+* 重复的定时器;
+* Yielding Processes;
+* 函数节流;
+* 自定义事件;
+* 拖放;
+
+### 离线应用与客户端存储
+
+* Cookie;
+* Web storage 定义了两种用于存储数据的对象: sessionStorage (在一个浏览器会话中存储数据)和 localStorage (用于跨对话持久化数据并遵循跨域安全策略);
+* IndexedDB (将数据保存在对象存储空间中);
+* 不要在客户端存储敏感数据,因为数据缓存不会加密;
+
+### 最佳实践
+
 * 
 
 ## HTML
