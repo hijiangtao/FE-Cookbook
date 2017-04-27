@@ -19,6 +19,7 @@
 * Number 类型: 使用 IEEE754 格式来表示整数或者浮点数值;
 * String 类型;
 * Object 类型;
+* ES6 中的基本数据类型是: Number, String, Null, Undefined, Symbol, Boolean, 用 typeof 可以检测出变量的基本数据类型, 其中 null 的 typeof 返回是 object;
 
 ### ECMAScript 操作符, 语句与函数
 
@@ -224,6 +225,7 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * 过滤输入, 自动切换焦点;
 * HTML5 约束验证 API: 比如 required 属性, 其他输入类型(email, url), 数值范围(min属性, max属性), 输入模式, 检测有效性(checkValidity() 方法, validity 属性), 禁用验证;
 * 选择框的 change 事件只要选中了选项就会被触发;
+* readonly 和 disabled 的区别: 他们是用在表单中的两个属性,它们都能够做到使用户不能够更改表单域中的内容.但是它们之间有着微小的差别,readonly 只针对 input(text/password) 和 textarea 有效，而 disabled 对于所有的表单元素都有效,包括 select, radio, checkbox, button 等; 但是表单元素在使用了 disabled 后,当我们将表单以 POST 或 GET 的方式提交的话,这个元素的值不会被传递出去,而 readonly 会将该值传递出去;
 
 ### 使用 Canvas 绘图
 
@@ -341,6 +343,9 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * Web Timing
 * Web Workers
 
+### 其他
+
+* JavaScript异步编程的四种方法: 回调函数,事件监听,发布/订阅模式(观察者模式),Promise对象;
 
 ## HTML
 
@@ -348,7 +353,11 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 
 ## CSS
 
-### Language Standard Internal
+### CSS3
+
+* 通过使用 word-break 属性，可以让浏览器实现在任意位置的换行; white-space 属性设置如何处理元素内的空白。
+
+> CSS 里，可替换元素（replaced element）的展现不是由CSS来控制的。这些元素是一类 外观渲染独立于CSS的 外部对象。 典型的可替换元素有 <img>、 <object>、 <video> 和 表单元素，如<textarea>、 <input> 。 - [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)
 
 ### Spots
 
