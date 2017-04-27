@@ -327,7 +327,20 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 
 ### 最佳实践
 
-* 
+* 让 JavaScript, HTML, CSS 各自完全定义其自己的目的非常重要, JavaScript 定义行为, HTML 定义内容, CSS定义外观;
+* DOM 交互开销很大,需要限制 DOM 操作次数;
+* 循环性能与使用上,建议使用 switch 语句替代 if 语句;
+* 在部署前推荐使用压缩器将文件尽可能变小;
+* 和 HTTP 压缩一起使用可以让 JavaScript 文件尽可能小,因此对整体页面性能的影响也会最小;
+
+### 新兴的 API
+
+* [window.requestAnimationFrame()](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) - MDN
+* [Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) - MDN
+* [File API](https://www.w3.org/TR/FileAPI/) - W3C
+* Web Timing
+* Web Workers
+
 
 ## HTML
 
