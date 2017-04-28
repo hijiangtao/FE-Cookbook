@@ -290,6 +290,7 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 
 > CSS 里，可替换元素（replaced element）的展现不是由CSS来控制的。这些元素是一类 外观渲染独立于CSS的 外部对象。 典型的可替换元素有 <img>、 <object>、 <video> 和 表单元素，如<textarea>、 <input> 。 - [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)
 
+
 ### Spots
 
 * [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) - MDN
