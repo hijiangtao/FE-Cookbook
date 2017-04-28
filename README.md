@@ -1,5 +1,12 @@
 # FE-Cookbook
 
+## Outline
+
+* [JavaScript](#javascript)
+* [HTML](#html)
+* [CSS](#css)
+* [Tools](#tools)
+
 ## JavaScript
 
 ### JavaScript 实现
@@ -10,7 +17,7 @@
 * 文档对象模型 (DOM, 由 DOM Core 和 DOM HTML 组成, 其他 DOM 标准还包括 SVG, MathML, SMIL 等)
 * 浏览器对象模型 (BOM, 提供与浏览器交互的方法与接口)
 
-### ECMAScript 数据类型
+### ECMAScript 数据类型,操作符,语句与函数
 
 * typeof 操作符: 用于检测给定变量的数据类型;
 * Undefined 类型: 声明变量但未对其初始化;尚未声明;
@@ -20,12 +27,8 @@
 * String 类型;
 * Object 类型;
 * ES6 中的基本数据类型是: Number, String, Null, Undefined, Symbol, Boolean, 用 typeof 可以检测出变量的基本数据类型, 其中 null 的 typeof 返回是 object;
-
-### ECMAScript 操作符, 语句与函数
-
 * 在函数内部可以通过 arguments 对象来访问参数数组
 * ECMAScript 中没有函数重载的概念
-* 
 
 ### 变量,作用域和内存问题
 
@@ -53,72 +56,7 @@
 * 原型对象
 * 属性的可枚举性和所有权
 
-<table>
- <thead>
-  <tr>
-   <th>&nbsp;</th>
-   <th>in</th>
-   <th>for..in</th>
-   <th>hasOwnProperty</th>
-   <th>propertyIsEnumerable</th>
-   <th>在 Object.keys 返回结果中</th>
-   <th>在 Object.getOwnPropertyNames 返回结果中</th>
-   <th>在 Object.getOwnPropertyDescriptors 返回结果中</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th>可枚举自身属性</th>
-   <td>true</td>
-   <td>true</td>
-   <td>true</td>
-   <td>true</td>
-   <td>true</td>
-   <td>true</td>
-   <td>true</td>
-  </tr>
-  <tr>
-   <th>不可枚举自身属性</th>
-   <td>true</td>
-   <td>false</td>
-   <td>true</td>
-   <td>false</td>
-   <td>false</td>
-   <td>true</td>
-   <td>true</td>
-  </tr>
-  <tr>
-   <th>可枚举继承属性</th>
-   <td>true</td>
-   <td>true</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-  </tr>
-  <tr>
-   <th>不可枚举继承属性</th>
-   <td>true</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-   <td>false</td>
-  </tr>
-  <tr>
-   <th>包含键为 Symbols &nbsp;类型的属性</th>
-   <td>true</td>
-   <td>false</td>
-   <td>true</td>
-   <td>true</td>
-   <td>false</td>
-   <td>false</td>
-   <td>true</td>
-  </tr>
- </tbody>
-</table>
+<table><thead><tr><th>&nbsp;</th><th>in</th><th>for..in</th><th>hasOwnProperty</th><th>propertyIsEnumerable</th><th>在 Object.keys 返回结果中</th><th>在 Object.getOwnPropertyNames 返回结果中</th><th>在 Object.getOwnPropertyDescriptors 返回结果中</th></tr></thead><tbody><tr><th>可枚举自身属性</th><td>true</td><td>true</td><td>true</td><td>true</td><td>true</td><td>true</td><td>true</td></tr><tr><th>不可枚举自身属性</th><td>true</td><td>false</td><td>true</td><td>false</td><td>false</td><td>true</td><td>true</td></tr><tr><th>可枚举继承属性</th><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr><tr><th>不可枚举继承属性</th><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr><tr><th>包含键为 Symbols &nbsp;类型的属性</th><td>true</td><td>false</td><td>true</td><td>true</td><td>false</td><td>false</td><td>true</td></tr></tbody></table>
 
 * 用字面量重写原型对象的方法和 `.prototype` 相比,除 constructor 属性不再指向对象外,其余结果均相同
 * 原型的动态性: 实例中的指针仅指向原型,而不指向构造函数
@@ -274,15 +212,11 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * console 具有如下方法: console.log('hello'), console.info('信息'), console.error('错误'), console.warn('警告');
 * 常见的 IE 错误: 在修改尚未加载完成的页面时,就会发生操作中止错误;
 
-### JavaScript, XML 与 E4X
+### JavaScript 与 XML, JSON
 
 * DOMParser 类型: 用于将 XML 解析为 DOM 类型;
 * XMLSerializer 类型: 将 DOM 文档序列转化为 XML 字符串;
 * 跨浏览器使用 XPath 最好只考虑实现 selectNode() 以及 selectNodes() 两个方法;
-* XSLT 略; E4X 略;
-
-### JSON
-
 * JavaScript 字符串与 JSON 字符串最大的区别在于: JSON 字符串必须使用双引号表示; 另外, JSON 的语法可以表示三种类型的值: 简单值,对象以及数组;
 * JSON 对象有两个方法: stringify() 将 JavaScript 对象序列化为 JSON 字符串, parse() 把 JSON 字符串解析为原生 JavaScript 值;
 * 在序列化 JavaScript 对象时,所有函数及原型成员都会被有意忽略,不体现在结果中.此外,值为 undefined 的任何属性也会被跳过.结果中最终都是值为有效 JSON 数据类型的实例属性;
@@ -335,16 +269,13 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * 在部署前推荐使用压缩器将文件尽可能变小;
 * 和 HTTP 压缩一起使用可以让 JavaScript 文件尽可能小,因此对整体页面性能的影响也会最小;
 
-### 新兴的 API
+### 新兴的 API 与其他
 
 * [window.requestAnimationFrame()](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) - MDN
 * [Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) - MDN
 * [File API](https://www.w3.org/TR/FileAPI/) - W3C
 * Web Timing
 * Web Workers
-
-### 其他
-
 * JavaScript异步编程的四种方法: 回调函数,事件监听,发布/订阅模式(观察者模式),Promise对象;
 
 ## HTML
@@ -361,7 +292,7 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 
 ### Spots
 
-* [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+* [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) - MDN
 
 ## Tools
 
@@ -370,6 +301,7 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * [HTTP协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
 * [Color Picker](http://colorizer.org/)
 * [Simple Icons](https://simpleicons.org/), SVG icons for popular brands
+* [How to center in CSS](http://howtocenterincss.com/)
 
 ### Ideas
 
