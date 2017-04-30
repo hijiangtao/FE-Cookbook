@@ -308,7 +308,9 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 
 ### Bundle
 
-* webpack
+* [webpack](http://webpack.github.io/)
+* [JSLint](http://www.jslint.com/) - The JavaScript Code Quality Tool
+* [WebAssembly](http://webassembly.org/) - A new portable, size- and load-time-efficient format suitable for compilation to the web.
 
 ## LICENSE
 
