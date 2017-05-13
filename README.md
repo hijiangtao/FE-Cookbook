@@ -304,6 +304,7 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * [Color Picker](http://colorizer.org/)
 * [Simple Icons](https://simpleicons.org/), SVG icons for popular brands
 * [How to center in CSS](http://howtocenterincss.com/)
+* [正则表达式30分钟入门教程](https://deerchao.net/tutorials/regex/regex.htm)
 
 ### Ideas
 
