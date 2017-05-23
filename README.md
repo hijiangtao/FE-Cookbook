@@ -29,6 +29,7 @@
 * ES6 中的基本数据类型是: Number, String, Null, Undefined, Symbol, Boolean, 用 typeof 可以检测出变量的基本数据类型, 其中 null 的 typeof 返回是 object;
 * 在函数内部可以通过 arguments 对象来访问参数数组
 * ECMAScript 中没有函数重载的概念
+* 求膜运算和求余运算需要被区分, JavaScript 中的 % 实现的是求余运算
 
 ### 变量,作用域和内存问题
 
@@ -108,6 +109,7 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * 当在函数内部定义了其他函数时,就创建了闭包.闭包有权访问包含函数内部的所有变量;
 * 使用闭包可以在 JavaScript 中模仿块级作用域;
 * 创建闭包必须维护额外的作用域,过度使用可能会占用大量内存;
+* 在 JavaScript 中一共有四种调用模式: 方法调用模式,函数调用模式,构造器调用模式和 apply 调用模式, 这些模式在如何初始化关键参数 this 上存在差异;
 
 ### BOM
 
