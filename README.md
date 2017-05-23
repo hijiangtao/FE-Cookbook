@@ -3,6 +3,7 @@
 ## Outline
 
 * [JavaScript](#javascript)
+* [Node.js]()
 * [HTML](#html)
 * [CSS](#css)
 * [Tools](#tools)
@@ -281,6 +282,8 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * Web Workers
 * JavaScript异步编程的四种方法: 回调函数,事件监听,发布/订阅模式(观察者模式),Promise对象;
 
+## Node.js
+
 ## HTML
 
 * [World Wide Web](https://en.wikipedia.org/wiki/World_Wide_Web)
@@ -306,6 +309,7 @@ A detailed demonstration can be accesssed at [Design-Patterns-in-Javascript](htt
 * [Color Picker](http://colorizer.org/)
 * [Simple Icons](https://simpleicons.org/), SVG icons for popular brands
 * [How to center in CSS](http://howtocenterincss.com/)
+* [正则表达式30分钟入门教程](https://deerchao.net/tutorials/regex/regex.htm)
 
 ### Ideas
 
