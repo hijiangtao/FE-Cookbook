@@ -18,4 +18,8 @@ HTML5 Geolocation API 返回坐标的格式为十进制格式. 位置信息由�
 
 ## Communication API
 
-跨文档消息通信
+跨文档消息通信使用 `postMessage()` 实现, 详情见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage).
+
+XMLHttpRequest Level 2 主要有两方面的特点: 跨源 XMLHttpRequests  以及进度事件.其主要的改进为对 readystatechange 事件的改进.
+
+## WebSockets API
