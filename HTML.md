@@ -23,3 +23,16 @@ HTML5 Geolocation API 返回坐标的格式为十进制格式. 位置信息由�
 XMLHttpRequest Level 2 主要有两方面的特点: 跨源 XMLHttpRequests  以及进度事件.其主要的改进为对 readystatechange 事件的改进.
 
 ## WebSockets API
+
+通过换用 HTML5 WebSockets 来替代轮询实现可以减少不必要的网络流量
+
+##  Forms API
+
+HTML5 Forms API 新增的特性,海曙以及元素包括 `placeholder`, `autocomplete`, `autofocus`, list 特性和 [datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist) 元素 (Safari不支持), min 和 max, `step`, `valueAsNumber` 函数和 `required`.
+
+## Web Workers API
+
+## Web Storage API
+
+* `sessionStorage`: 只要浏览器窗口(或标签)不关闭它们就会一直存在. 
+* `localStorage`: 生命周期更长,数据可被同源的每个窗口或者标签页共享.
