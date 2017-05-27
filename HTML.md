@@ -36,3 +36,17 @@ HTML5 Forms API 新增的特性,海曙以及元素包括 `placeholder`, `autocom
 
 * `sessionStorage`: 只要浏览器窗口(或标签)不关闭它们就会一直存在. 
 * `localStorage`: 生命周期更长,数据可被同源的每个窗口或者标签页共享.
+* Web SQL Database 是一个已经废弃的规范，但是鉴于除了IE和Firefox，其它浏览器都已经实现了 Web SQL Database,并且它还具有一些 HTML5 Storage 所不具有的特性，所以还是值得了解一下的.
+
+## 构建离线 Web 应用
+
+[application cache](https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache) 被废弃了，采用 [Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) 替代(目前仍为实验阶段)
+
+## HTML5 未来展望
+
+* WebGL
+* 设备
+* 音频数据 API
+* 视频元素改进
+* 触摸屏设备事件
+* P2P 网络
