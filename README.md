@@ -33,6 +33,7 @@
 
 ### Spots
 
+* [深入理解 CSS3 弹性盒布局模型](https://www.ibm.com/developerworks/cn/web/1409_chengfu_css3flexbox/)
 * [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) - MDN
 
 ## Tools
