@@ -48,6 +48,8 @@
 
 ### Ideas
 
+* [The birth and death of JavaScript](https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript)
+
 ### Bundle
 
 * [webpack](http://webpack.github.io/)
