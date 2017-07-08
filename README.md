@@ -36,6 +36,7 @@
 * [深入理解 CSS3 弹性盒布局模型](https://www.ibm.com/developerworks/cn/web/1409_chengfu_css3flexbox/)
 * [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) - MDN
 * [移动端 1px 细线解决方案总结](http://www.cnblogs.com/lunarorbitx/p/5287309.html)
+* [CSS像素、物理像素、逻辑像素、设备像素比、PPI、Viewport](https://github.com/jawil/blog/issues/21)
 
 ## Tools
 
