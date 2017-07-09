@@ -37,6 +37,7 @@
 * [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) - MDN
 * [移动端 1px 细线解决方案总结](http://www.cnblogs.com/lunarorbitx/p/5287309.html)
 * [CSS像素、物理像素、逻辑像素、设备像素比、PPI、Viewport](https://github.com/jawil/blog/issues/21)
+* [学习使用：before和：after伪元素](http://www.w3cplus.com/css3/learning-to-use-the-before-and-after-pseudo-elements-in-css.html)
 
 ## Tools
 
