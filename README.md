@@ -52,7 +52,7 @@
 ### Ideas & Tools
 
 * [The birth and death of JavaScript](https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript)
-* [cssreference.io](http://cssreference.io/)
+* [cssreference.io](http://cssreference.io/) - A free visual guide to CSS.
 
 ### Bundle
 
