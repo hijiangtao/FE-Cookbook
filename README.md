@@ -49,9 +49,10 @@
 * [How to center in CSS](http://howtocenterincss.com/)
 * [正则表达式30分钟入门教程](https://deerchao.net/tutorials/regex/regex.htm)
 
-### Ideas
+### Ideas & Tools
 
 * [The birth and death of JavaScript](https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript)
+* [cssreference.io](http://cssreference.io/)
 
 ### Bundle
 
