@@ -39,6 +39,7 @@
 * [移动端 1px 细线解决方案总结](http://www.cnblogs.com/lunarorbitx/p/5287309.html)
 * [CSS像素、物理像素、逻辑像素、设备像素比、PPI、Viewport](https://github.com/jawil/blog/issues/21)
 * [学习使用：before和：after伪元素](http://www.w3cplus.com/css3/learning-to-use-the-before-and-after-pseudo-elements-in-css.html)
+* [Android 浏览器文本垂直居中问题](http://imweb.io/topic/5848d0fc9be501ba17b10a94)
 
 ## Tools
 
