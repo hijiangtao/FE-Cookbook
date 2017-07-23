@@ -125,3 +125,14 @@ mixin 模式常用于在 *某种程度上* 模拟类的拷贝行为，但是这�
 
 ## 第一章：类型
 
+JavaScript有7种内建 *类型*：`null`，`undefined`，`boolean`，`number`，`string`，`object`，`symbol`。它们可以被`typeof`操作符识别。
+
+变量没有类型，但是值有类型。这些类型定义了值的固有行为。
+
+许多开发者会认为“undefined”和“undeclared”大体上是同一个东西，但是在JavaScript中，它们是十分不同的。`undefined`是一个可以由被声明的变量持有的值。“未声明”意味着一个变量从来没有被声明过。
+
+JavaScript很不幸地将这两个词在某种程度上混为了一谈，不仅体现在它的错误消息上（“ReferenceError: a is not defined”），也体现在`typeof`的返回值上：对于两者它都返回`"undefined"`。
+
+然而，当对一个未声明的变量使用`typeof`时，`typeof`上的安全防卫机制（防止一个错误）可以在特定的情况下非常有用。
+
+## 第二章：值
