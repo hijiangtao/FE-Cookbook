@@ -51,6 +51,7 @@
 * [How to center in CSS](http://howtocenterincss.com/)
 * [正则表达式30分钟入门教程](https://deerchao.net/tutorials/regex/regex.htm)
 * [在安卓设备上使用 Chrome 远程调试功能](http://wiki.jikexueyuan.com/project/chrome-devtools/remote-debugging-on-android.html)
+* [关于通过H5页面唤Native户端的介绍](https://github.com/AlanZhang001/H5CallUpNative)
 
 ### Ideas & Tools
 
