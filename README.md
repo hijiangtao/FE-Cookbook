@@ -45,6 +45,7 @@
 
 ### Web Related
 
+* [JavaScript equality table](http://dorey.github.io/JavaScript-Equality-Table/)
 * [HTTP协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
 * [Color Picker](http://colorizer.org/)
 * [Simple Icons](https://simpleicons.org/), SVG icons for popular brands
