@@ -247,6 +247,24 @@ Data URL也有一些不适用的场合：
 
 **答**：根据 ["npm install --save" No Longer Using Tildes](http://fredkschott.com/post/2014/02/npm-no-longer-defaults-to-tildes/) 一文可知，形如波浪号的编号（例如：~1.2.3）会匹配对应软件所有的 1.2.x 版本，并最终使用最新的符合要求的版本；相比之下倒 V 型编号（例如：^1.2.3）有更松弛的规则，所有 1.x.x 版本均在匹配列表中，但匹配过程会在 2.0.0 停止并返回最新的符合要求的版本。
 
+## 浏览器
+
+#### 如何识别网页是否正在iframe中加载或直接进入浏览器窗口？
+
+**答**：由于same origin policy，浏览器可以阻止访问window.top。 IE也发生错误。以下是工作代码：
+
+```
+function inIframe () {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
+    }
+}
+```
+
+top 和 self 都是 window 对象(连同 parent )，所以能看到你的窗口是否是顶窗。
+
 ## HTTP
 
 #### HTTP/0.9 只有一个命令 `GET`, HTTP/1.0 引入了 `POST` 命令和 `HEAD` 命令，丰富了浏览器与服务器的互动手段。请问 HTTP/1.1 的请求方法有哪些？
