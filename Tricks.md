@@ -226,6 +226,15 @@ iframe会不利于搜索引擎优化
 2. touchmove事件：当手指在屏幕上滑动的时候连续地触发。在这个事件发生期间，调用preventDefault()事件可以阻止滚动。
 3. touchend事件：当手指从屏幕上离开的时候触发。
 
+#### 事件对象的 clientX, offsetX, screenX, pageX 有什么区别？
+
+**答**：
+
+1. event.clientX、event.clientY: 鼠标相对于浏览器窗口可视区域的X, Y坐标（窗口坐标），可视区域不包括工具栏和滚动条。
+2. event.pageX、event.pageY: 鼠标相对于整个页面的X/Y坐标。注意，整个页面的意思就是你整个网页的全部，比如说网页很宽很长，宽2000px，高3000px，那pageX, pageY的最大值就是它们了。**特别说明：IE不支持！**
+3. screenX、screenY: 鼠标相对于用户显示器屏幕左上角的X, Y坐标。
+4. event.offsetX、event.offsetY: 鼠标相对于事件父容器（srcElement）的X, Y坐标。**特别说明：只有IE支持！**
+
 ## CSS
 
 #### 什么是盒子模型？
