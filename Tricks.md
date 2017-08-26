@@ -274,6 +274,17 @@ Data URL也有一些不适用的场合：
 * transition关注的是CSS property的变化，property值和时间的关系是一个三次贝塞尔曲线；
 * animation作用于元素本身而不是样式属性，可以使用关键帧的概念，应该说可以实现更自由的动画效果；
 
+#### position 布局方式都有哪些？
+
+**答**：
+
+* **static** - static 是默认值。任意 `position: static;` 的元素不会被特殊的定位。一个 static 元素表示它不会被“positioned”，一个 position 属性被设置为其他值的元素表示它会被“positioned”。
+* **relative** - relative 表现的和 static 一样，除非你添加了一些额外的属性。在一个相对定位（position属性的值为relative）的元素上设置 top 、 right 、 bottom 和 left 属性会使其偏离其正常位置。其他的元素的位置则不会受该元素的影响发生位置改变来弥补它偏离后剩下的空隙。
+* **fixed** - 一个固定定位（position属性的值为fixed）元素会相对于视窗来定位，这意味着即便页面滚动，它还是会停留在相同的位置。和 relative 一样， top 、 right 、 bottom 和 left 属性都可用。
+* **absolute** - absolute 与 fixed 的表现类似，它相对于最近的“positioned”祖先元素。如果绝对定位（position属性的值为absolute）的元素没有“positioned”祖先元素，那么它是相对于文档的 body 元素，并且它会随着页面滚动而移动。
+
+*记住一个“positioned”元素是指 position 值不是 static 的元素。*
+
 ## Node 软件包管理
 
 #### 简述同步和异步之间的区别？
