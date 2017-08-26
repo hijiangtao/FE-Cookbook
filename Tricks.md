@@ -285,6 +285,16 @@ Data URL也有一些不适用的场合：
 
 *记住一个“positioned”元素是指 position 值不是 static 的元素。*
 
+#### display 的属性都有哪些？
+
+**答**：块级元素默认值为 block，而行内元素为 inline。
+
+* **block** - div 是一个标准的块级元素。一个块级元素会新开始一行并且尽可能撑满容器。其他常用的块级元素包括 p 、 form 和HTML5中的新元素： header 、 footer 、 section 等等。
+* **inline** - 一个行内元素可以在段落中包裹一些文字而不会打乱段落的布局。 a 元素是最常用的行内元素。
+* **none** - 一些特殊元素的默认 display 值是它，例如 script 。 display:none 通常被 JavaScript 用来在不删除元素的情况下隐藏或显示元素。它和 visibility 属性不一样。把 display 设置成 none 元素不会占据它本来应该显示的空间，但是设置成 visibility: hidden; 还会占据空间。
+
+其他 display 值，例如 inline-block, list-item, table 和 flex。
+
 ## Node 软件包管理
 
 #### 简述同步和异步之间的区别？
