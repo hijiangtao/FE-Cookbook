@@ -168,6 +168,142 @@ iframe会不利于搜索引擎优化
 
 ## JavaScript
 
+#### JavaScript 中的 new 关键词做了什么？
+
+* **答**：他做了五件事
+
+1. 他生成了一个新对象。这个对象的类型只是一个普通的对象；
+2. 他将新对象内部、不可访问的原型属性（例如：`__proto__`）设置为构造器函数外在、可访问的 prototype 对象（每个函数对象都会自动拥有一个 `prototype` 属性）；
+3. 他将 `this` 变量指向这个新生成的对象；
+4. 他执行构造器函数，对于每个提及到 `this` 的地方使用新生成的对象执行；
+5. 他返回这个新生成的对象，除非构造器函数返回了一个非空的对象引用。若是返回了一个非空对象，那么这个对象引用将会替代新生成的对象被返回；
+
+#### JavaScript 的六种继承类型？
+
+* **答**：
+
+* 简单原型链：这是实现继承最简单的方式了，核心在于用父类实例作为子类原型对象。优点是简单，缺点在于二 - 创建子类实例时，无法向父类构造函数传参；由于来自原型对象的引用属性是所有实例共享的，所以修改原型对象上的属性会在所有子类实例中体现出来；
+
+```
+function Super(){
+    this.val = 1;
+}
+function Sub(){
+    // ...
+}
+Sub.prototype = new Super();
+
+let sub1 = new Sub();
+```
+
+* 借用构造函数：借父类的构造函数来增强子类实例，等于是把父类的实例属性复制了一份给子类实例装上了（完全没有用到原型）;缺点在于无法实现函数复用，每个子类实例都持有一个新的 `fun` 函数，太多了就会影响性能；
+
+```
+function Super(val){
+    this.val = val;
+
+    this.fun = function(){
+        // ...
+    }
+}
+function Sub(val){
+    Super.call(this, val);   // 核心
+}
+
+let sub1 = new Sub(1);
+```
+
+* 组合继承（最常用）：把实例函数都放在原型对象上，以实现函数复用。同时还要保留借用构造函数方式的优点；子类原型上有一份多余的父类实例属性，因为父类构造函数被调用了两次，生成了两份，而子类实例上的那一份屏蔽了子类原型上的定义，属于内存浪费；
+
+```
+function Super(){
+    // 只在此处声明基本属性和引用属性
+    this.val = 1;
+}
+//  在此处声明函数
+Super.prototype.fun1 = function(){};
+
+function Sub(){
+    Super.call(this);   // 核心
+    // ...
+}
+Sub.prototype = new Super();    // 核心
+
+let sub1 = new Sub(1);
+```
+
+* 原型式继承：从已有的对象中衍生出新对象，不需要创建自定义类型；但原型引用属性会被所有实例共享，因为用整个父类对象来充当子类原型对象；无法实现代码复用；
+
+```
+function beget(obj){   // 生孩子函数 beget
+    let F = function(){};
+    F.prototype = obj;
+    return new F();
+}
+function Super(){
+    this.val = 1;
+    this.arr = [1];
+}
+
+// 拿到父类对象
+let sup = new Super();
+// 生孩子
+let sub = beget(sup);
+```
+
+* 寄生式继承：寄生式继承的思路和寄生构造函数和工厂模式相似，即创建一个仅用于封装继承过程的函数，该函数在内部以某种形式来增强对象，最后像真的是它做了所有工作一样返回对象；但是这种形式依然不能复用函数；
+
+```
+function beget(obj){   // 生孩子函数
+    let F = function(){};
+    F.prototype = obj;
+    return new F();
+}
+function Super(){
+    this.val = 1;
+    this.arr = [1];
+}
+function getSubObject(obj){
+    // 创建新对象
+    let clone = beget(obj); // 核心
+    // 增强
+    clone.attr1 = 1;
+    clone.attr2 = 2;
+
+    return clone;
+}
+
+var sub = getSubObject(new Super());
+```
+
+* 寄生组合继承（最佳方式）：用 beget(Super.prototype) 切掉了原型对象上多余的那份父类实例属性；
+
+```
+function beget(obj){   // 生孩子函数 beget
+    let F = function(){};
+    F.prototype = obj;
+    return new F();
+}
+function Super(){
+    // 只在此处声明基本属性和引用属性
+    this.val = 1;
+    this.arr = [1];
+}
+//  在此处声明函数
+Super.prototype.fun1 = function(){};
+Super.prototype.fun2 = function(){};
+
+function Sub(){
+    Super.call(this);   // 核心
+    // ...
+}
+let proto = beget(Super.prototype); // 核心
+proto.constructor = Sub;            // 核心
+Sub.prototype = proto;              // 核心
+
+let sub = new Sub();
+```
+
 #### 为什么我们区别 LHS 和 RHS 那么重要？
 
 **答**：因为在变量还没有被声明（在所有被查询的 作用域 中都没找到）的情况下，这两种类型的查询的行为不同。如果 RHS 查询在嵌套的作用域的任何地方都找不到一个值，这会导致引擎抛出一个 ReferenceError。相比之下，如果引擎在进行一个 LHS 查询，但到达了顶层（全局 作用域）都没有找到它，而且如果程序没有运行在“Strict模式”下，那么这个全局作用域将会在全局作用域中创建一个同名的新变量，并把它交还给引擎。而如果一个 RHS 查询的变量被找到了，但是你试着去做一些这个值不可能做到的事，比如将一个非函数的值作为函数运行，或者引用 null 或者 undefined 值的属性，那么引擎就会抛出一个不同种类的错误，称为 TypeError。
