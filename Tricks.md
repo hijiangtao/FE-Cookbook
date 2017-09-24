@@ -168,6 +168,14 @@ iframe会不利于搜索引擎优化
 
 ## JavaScript
 
+#### ECMAScript/JavaScript 中都有那些数据类型？
+
+**答**：ECMAScript中5种简单数据类型（基本数据类型）: Undefined、Null、Boolean、Number和String, 1种复杂数据类型: Object.
+
+#### 把非数值转化为数值的函数都有哪些？
+
+**答**：Number()、parseInt()和parseFloat()，第一个函数，即转型函数Number()可以用于任何数据类型，而另两个函数则专门用于把字符串转换成数值。
+
 ## CSS
 
 #### 什么是盒子模型？
@@ -260,5 +268,6 @@ iframe会不利于搜索引擎优化
 * <https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes>
 * <http://blog.csdn.net/NJUPT_T/article/details/50700209>
 * <http://web.jobbole.com/84826/>
+* <http://web.jobbole.com/85340/>
 
 文章参考了以上资源，同时参照 <https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers> 的部分问题列表重新归纳了详细问题答案。
