@@ -19,6 +19,7 @@
 ## HTML
 
 * [World Wide Web](https://en.wikipedia.org/wiki/World_Wide_Web)
+* [渲染性能](https://developers.google.com/web/fundamentals/performance/rendering/)
 
 [Details](./HTML.md)
 
@@ -33,19 +34,33 @@
 
 ### Spots
 
+* [学习 CSS 布局](http://zh.learnlayout.com/)
+* [深入理解 CSS3 弹性盒布局模型](https://www.ibm.com/developerworks/cn/web/1409_chengfu_css3flexbox/)
 * [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) - MDN
+* [移动端 1px 细线解决方案总结](http://www.cnblogs.com/lunarorbitx/p/5287309.html)
+* [CSS像素、物理像素、逻辑像素、设备像素比、PPI、Viewport](https://github.com/jawil/blog/issues/21)
+* [学习使用：before和：after伪元素](http://www.w3cplus.com/css3/learning-to-use-the-before-and-after-pseudo-elements-in-css.html)
+* [Android 浏览器文本垂直居中问题](http://imweb.io/topic/5848d0fc9be501ba17b10a94)
 
 ## Tools
 
 ### Web Related
 
+* [JavaScript equality table](http://dorey.github.io/JavaScript-Equality-Table/)
 * [HTTP协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
 * [Color Picker](http://colorizer.org/)
 * [Simple Icons](https://simpleicons.org/), SVG icons for popular brands
 * [How to center in CSS](http://howtocenterincss.com/)
 * [正则表达式30分钟入门教程](https://deerchao.net/tutorials/regex/regex.htm)
+* [在安卓设备上使用 Chrome 远程调试功能](http://wiki.jikexueyuan.com/project/chrome-devtools/remote-debugging-on-android.html)
+* [关于通过H5页面唤Native户端的介绍](https://github.com/AlanZhang001/H5CallUpNative)
+* [前端性能优化最佳实践](https://csspod.com/frontend-performance-best-practices/)
 
-### Ideas
+### Ideas & Tools
+
+* [The birth and death of JavaScript](https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript)
+
+* [cssreference.io](http://cssreference.io/) - A free visual guide to CSS.
 
 ### Bundle
 

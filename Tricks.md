@@ -176,6 +176,218 @@ iframe会不利于搜索引擎优化
 
 **答**：Number()、parseInt()和parseFloat()，第一个函数，即转型函数Number()可以用于任何数据类型，而另两个函数则专门用于把字符串转换成数值。
 
+#### JavaScript 中的 new 关键词做了什么？
+
+* **答**：他做了五件事
+
+1. 他生成了一个新对象。这个对象的类型只是一个普通的对象；
+2. 他将新对象内部、不可访问的原型属性（例如：`__proto__`）设置为构造器函数外在、可访问的 prototype 对象（每个函数对象都会自动拥有一个 `prototype` 属性）；
+3. 他将 `this` 变量指向这个新生成的对象；
+4. 他执行构造器函数，对于每个提及到 `this` 的地方使用新生成的对象执行；
+5. 他返回这个新生成的对象，除非构造器函数返回了一个非空的对象引用。若是返回了一个非空对象，那么这个对象引用将会替代新生成的对象被返回；
+
+#### JavaScript 的六种继承类型？
+
+* **答**：
+
+* 简单原型链：这是实现继承最简单的方式了，核心在于用父类实例作为子类原型对象。优点是简单，缺点在于二 - 创建子类实例时，无法向父类构造函数传参；由于来自原型对象的引用属性是所有实例共享的，所以修改原型对象上的属性会在所有子类实例中体现出来；
+
+```
+function Super(){
+    this.val = 1;
+}
+function Sub(){
+    // ...
+}
+Sub.prototype = new Super();
+
+let sub1 = new Sub();
+```
+
+* 借用构造函数：借父类的构造函数来增强子类实例，等于是把父类的实例属性复制了一份给子类实例装上了（完全没有用到原型）;缺点在于无法实现函数复用，每个子类实例都持有一个新的 `fun` 函数，太多了就会影响性能；
+
+```
+function Super(val){
+    this.val = val;
+
+    this.fun = function(){
+        // ...
+    }
+}
+function Sub(val){
+    Super.call(this, val);   // 核心
+}
+
+let sub1 = new Sub(1);
+```
+
+* 组合继承（最常用）：把实例函数都放在原型对象上，以实现函数复用。同时还要保留借用构造函数方式的优点；子类原型上有一份多余的父类实例属性，因为父类构造函数被调用了两次，生成了两份，而子类实例上的那一份屏蔽了子类原型上的定义，属于内存浪费；
+
+```
+function Super(){
+    // 只在此处声明基本属性和引用属性
+    this.val = 1;
+}
+//  在此处声明函数
+Super.prototype.fun1 = function(){};
+
+function Sub(){
+    Super.call(this);   // 核心
+    // ...
+}
+Sub.prototype = new Super();    // 核心
+
+let sub1 = new Sub(1);
+```
+
+* 原型式继承：从已有的对象中衍生出新对象，不需要创建自定义类型；但原型引用属性会被所有实例共享，因为用整个父类对象来充当子类原型对象；无法实现代码复用；
+
+```
+function beget(obj){   // 生孩子函数 beget
+    let F = function(){};
+    F.prototype = obj;
+    return new F();
+}
+function Super(){
+    this.val = 1;
+    this.arr = [1];
+}
+
+// 拿到父类对象
+let sup = new Super();
+// 生孩子
+let sub = beget(sup);
+```
+
+* 寄生式继承：寄生式继承的思路和寄生构造函数和工厂模式相似，即创建一个仅用于封装继承过程的函数，该函数在内部以某种形式来增强对象，最后像真的是它做了所有工作一样返回对象；但是这种形式依然不能复用函数；
+
+```
+function beget(obj){   // 生孩子函数
+    let F = function(){};
+    F.prototype = obj;
+    return new F();
+}
+function Super(){
+    this.val = 1;
+    this.arr = [1];
+}
+function getSubObject(obj){
+    // 创建新对象
+    let clone = beget(obj); // 核心
+    // 增强
+    clone.attr1 = 1;
+    clone.attr2 = 2;
+
+    return clone;
+}
+
+var sub = getSubObject(new Super());
+```
+
+* 寄生组合继承（最佳方式）：用 beget(Super.prototype) 切掉了原型对象上多余的那份父类实例属性；
+
+```
+function beget(obj){   // 生孩子函数 beget
+    let F = function(){};
+    F.prototype = obj;
+    return new F();
+}
+function Super(){
+    // 只在此处声明基本属性和引用属性
+    this.val = 1;
+    this.arr = [1];
+}
+//  在此处声明函数
+Super.prototype.fun1 = function(){};
+Super.prototype.fun2 = function(){};
+
+function Sub(){
+    Super.call(this);   // 核心
+    // ...
+}
+let proto = beget(Super.prototype); // 核心
+proto.constructor = Sub;            // 核心
+Sub.prototype = proto;              // 核心
+
+let sub = new Sub();
+```
+
+#### 箭头函数的适用规则？
+
+* **答**：
+
+* 如果你有一个简短的，单语句内联函数表达式，它唯一的语句是某个计算后的值的return语句，并且 这个函数没有在它内部制造一个this引用，并且没有自引用（递归，事件绑定/解除），并且 你合理地预期这个函数绝不会变得需要this引用或自引用，那么你就可能安全地将它重构为一个=>箭头函数。
+* 如果你有一个内部函数表达式，它依赖于外围函数的 var self = this 黑科技或者.bind(this)调用来确保正确的this绑定，那么这个内部函数表达式就可能安全地变为一个=>箭头函数。
+* 如果你有一个内部函数表达式，它依赖于外围函数的类似于 var args = Array.prototype.slice.call(arguments) 这样的东西来制造一个arguments的词法拷贝，那么这个内部函数就可能安全地变为一个=>箭头函数。
+* 对于其他的所有东西 —— 普通函数声明，较长的多语句函数表达式，需要词法名称标识符进行自引用（递归等）的函数，和任何其他不符合前述性质的函数 —— 你就可能应当避免=>函数语法。
+
+#### 为什么我们区别 LHS 和 RHS 那么重要？
+
+**答**：因为在变量还没有被声明（在所有被查询的 作用域 中都没找到）的情况下，这两种类型的查询的行为不同。如果 RHS 查询在嵌套的作用域的任何地方都找不到一个值，这会导致引擎抛出一个 ReferenceError。相比之下，如果引擎在进行一个 LHS 查询，但到达了顶层（全局 作用域）都没有找到它，而且如果程序没有运行在“Strict模式”下，那么这个全局作用域将会在全局作用域中创建一个同名的新变量，并把它交还给引擎。而如果一个 RHS 查询的变量被找到了，但是你试着去做一些这个值不可能做到的事，比如将一个非函数的值作为函数运行，或者引用 null 或者 undefined 值的属性，那么引擎就会抛出一个不同种类的错误，称为 TypeError。
+
+#### 如何区分声明和表达式？
+
+**答**：区分声明与表达式的最简单的方法是，这个语句中（不仅仅是一行，而是一个独立的语句）“function”一词的位置。如果“function”是这个语句中的第一个东西，那么它就是一个函数声明。否则，它就是一个函数表达式。
+
+#### IIFE 方式与变种？
+
+**答**：
+
+```javascript
+// 1
+(function foo(){ .. })()
+
+// 2
+(function(){ .. }())
+
+// 3，用于 UMD 项目
+(function IIFE( def ){
+	def( window );
+})(function def( global ){
+	let a = 3;
+	console.log( a ); // 3
+	console.log( global.a ); // 2
+});
+```
+
+#### 请解释如下代码执行的结果？
+
+```
+[] + {}; // "[object Object]"
+{} + []; // 0
+```
+
+**答**：在第一行中，{}出现在+操作符的表达式中，因此被翻译为一个实际的值（一个空object）。而[]被强制转换为""因此{}也会被强制转换为一个string："[object Object]"。但在第二行中，{}被翻译为一个独立的{}空代码块儿（它什么也不做）。块儿不需要分号来终结它们，所以这里缺少分号不是一个问题。最终，+ []是一个将[]明确强制转换 为number的表达式，而它的值是0。
+
+#### 什么是事件委托？
+
+**答**：：事件委托，通俗地来讲，就是把一个元素响应事件（click、keydown……）的函数委托到另一个元素；一般来讲，会把一个或者一组元素的事件委托到它的父层或者更外层元素上，真正绑定事件的是外层元素，当事件响应到需要绑定的元素上时，会通过事件冒泡机制从而触发它的外层元素的绑定事件上，然后在外层元素上去执行函数。事件委托的好处包括：动态绑定事件与减少内存消耗。
+
+#### JavaScript 与 HTML 之间交互的事件模型分为几个阶段？
+
+**答**：
+
+1. 捕获阶段：在事件冒泡的模型中，捕获阶段不会响应任何事件；
+2. 目标阶段：目标阶段就是指事件响应到触发事件的最底层元素上；
+3. 冒泡阶段：冒泡阶段就是事件的触发响应会从最底层目标一层层地向外到最外层（根节点），事件代理即是利用事件冒泡的机制把里层所需要响应的事件绑定到外层；
+
+#### 触摸事件都有哪些？
+
+**答**：三种在规范中列出并获得跨移动设备广泛实现的基本触摸事件
+
+1. touchstart事件：当手指触摸屏幕时候触发，即使已经有一个手指放在屏幕上也会触发。
+2. touchmove事件：当手指在屏幕上滑动的时候连续地触发。在这个事件发生期间，调用preventDefault()事件可以阻止滚动。
+3. touchend事件：当手指从屏幕上离开的时候触发。
+
+#### 事件对象的 clientX, offsetX, screenX, pageX 有什么区别？
+
+**答**：
+
+1. event.clientX、event.clientY: 鼠标相对于浏览器窗口可视区域的X, Y坐标（窗口坐标），可视区域不包括工具栏和滚动条。
+2. event.pageX、event.pageY: 鼠标相对于整个页面的X/Y坐标。注意，整个页面的意思就是你整个网页的全部，比如说网页很宽很长，宽2000px，高3000px，那pageX, pageY的最大值就是它们了。**特别说明：IE不支持！**
+3. screenX、screenY: 鼠标相对于用户显示器屏幕左上角的X, Y坐标。
+4. event.offsetX、event.offsetY: 鼠标相对于事件父容器（srcElement）的X, Y坐标。**特别说明：只有IE支持！**
+
 ## CSS
 
 #### 什么是盒子模型？
@@ -186,6 +398,56 @@ iframe会不利于搜索引擎优化
 
 **答**：使用 CSS `word-break` 属性（CSS 属性 word-break 指定了怎样在单词内断行的规则）或者 CSS `text-overflow` 属性（text-overflow CSS 属性确定如何向用户发出未显示的溢出内容信号。它可以被剪切，显示一个省略号或显示一个自定义字符串）。
 
+#### 什么是 Data URI？
+
+**答**：Data URI 是一种提供让外置资源的直接内嵌在页面中的方案。这种技术允许我们只需单次 HTTP 请求即可获取所有需要引用的图片与样式资源，并因无需多次请求资源而变的高效。
+
+####  Data URI 的好处和缺点都有哪些？
+
+**答**：在 img 方式引用图片时，img标记的src属性指定了一个远程服务器上的资源。当网页加载到浏览器中时，浏览器会针对每个外部资源都向服务器发送一次拉取资源请求，占用网络资源。大多数的浏览器都有一个并发请求数不能超过4个的限制。这意味着，如果一个网页里嵌入了过多的外部资源，这些请求会导致整个页面的加载延迟。而使用Data URL技术，图片数据以base64字符串格式嵌入到了页面中，其中好处包括：
+
+* 当访问外部资源很麻烦或受限时。
+* 当图片是在服务器端用程序动态生成，每个访问用户显示的都不同时。
+* 当图片的体积太小，占用一个HTTP会话不是很值得时。
+
+Data URL也有一些不适用的场合：
+
+* Base64编码的数据体积通常是原数据的体积4/3，也就是Data URL形式的图片会比二进制格式的图片体积大1/3。
+* Data URL形式的图片不会被浏览器缓存，这意味着每次访问这样页面时都被下载一次。这是一个使用效率方面的问题——尤其当这个图片被整个网站大量使用的时候。
+
+#### 内联元素和块级元素的区别？
+
+**答**：块级元素和内联元素对于CSS调用的不同效果 - 块级元素默认独占一行，默认宽度为父元素的100%，可以设置宽度、高度，外边距、内边距；内联元素默认不独占一行，宽度随着内容自动撑，无法设置宽度、高度、外边距。可以设置内边距。内联元素要设置宽高必须用css设置块显示。
+
+#### CSS Transform / Transition / Animation 属性的区别？
+
+**答**：
+
+* transform属性是静态属性，一旦写到style里面，将会直接显示作用，无任何变化过程。transform的主要用途是用来做元素的特殊变形；
+* transition关注的是CSS property的变化，property值和时间的关系是一个三次贝塞尔曲线；
+* animation作用于元素本身而不是样式属性，可以使用关键帧的概念，应该说可以实现更自由的动画效果；
+
+#### position 布局方式都有哪些？
+
+**答**：
+
+* **static** - static 是默认值。任意 `position: static;` 的元素不会被特殊的定位。一个 static 元素表示它不会被“positioned”，一个 position 属性被设置为其他值的元素表示它会被“positioned”。
+* **relative** - relative 表现的和 static 一样，除非你添加了一些额外的属性。在一个相对定位（position属性的值为relative）的元素上设置 top 、 right 、 bottom 和 left 属性会使其偏离其正常位置。其他的元素的位置则不会受该元素的影响发生位置改变来弥补它偏离后剩下的空隙。
+* **fixed** - 一个固定定位（position属性的值为fixed）元素会相对于视窗来定位，这意味着即便页面滚动，它还是会停留在相同的位置。和 relative 一样， top 、 right 、 bottom 和 left 属性都可用。
+* **absolute** - absolute 与 fixed 的表现类似，它相对于最近的“positioned”祖先元素。如果绝对定位（position属性的值为absolute）的元素没有“positioned”祖先元素，那么它是相对于文档的 body 元素，并且它会随着页面滚动而移动。
+
+*记住一个“positioned”元素是指 position 值不是 static 的元素。*
+
+#### display 的属性都有哪些？
+
+**答**：块级元素默认值为 block，而行内元素为 inline。
+
+* **block** - div 是一个标准的块级元素。一个块级元素会新开始一行并且尽可能撑满容器。其他常用的块级元素包括 p 、 form 和HTML5中的新元素： header 、 footer 、 section 等等。
+* **inline** - 一个行内元素可以在段落中包裹一些文字而不会打乱段落的布局。 a 元素是最常用的行内元素。
+* **none** - 一些特殊元素的默认 display 值是它，例如 script 。 display:none 通常被 JavaScript 用来在不删除元素的情况下隐藏或显示元素。它和 visibility 属性不一样。把 display 设置成 none 元素不会占据它本来应该显示的空间，但是设置成 visibility: hidden; 还会占据空间。
+
+其他 display 值，例如 inline-block, list-item, table 和 flex。
+
 ## Node 软件包管理
 
 #### 简述同步和异步之间的区别？
@@ -195,6 +457,24 @@ iframe会不利于搜索引擎优化
 #### 在每个 package.json 的 dependency 中都会有很多软件名以及随之跟上的版本号，例如 `"d3": "^3.9.0"` 或者 `"d3": "~3.9.0"`，请问 "^" 和 "~" 的含义分别是什么？
 
 **答**：根据 ["npm install --save" No Longer Using Tildes](http://fredkschott.com/post/2014/02/npm-no-longer-defaults-to-tildes/) 一文可知，形如波浪号的编号（例如：~1.2.3）会匹配对应软件所有的 1.2.x 版本，并最终使用最新的符合要求的版本；相比之下倒 V 型编号（例如：^1.2.3）有更松弛的规则，所有 1.x.x 版本均在匹配列表中，但匹配过程会在 2.0.0 停止并返回最新的符合要求的版本。
+
+## 浏览器
+
+#### 如何识别网页是否正在iframe中加载或直接进入浏览器窗口？
+
+**答**：由于same origin policy，浏览器可以阻止访问window.top。 IE也发生错误。以下是工作代码：
+
+```
+function inIframe () {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
+    }
+}
+```
+
+top 和 self 都是 window 对象(连同 parent )，所以能看到你的窗口是否是顶窗。
 
 ## HTTP
 
