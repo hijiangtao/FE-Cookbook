@@ -1,6 +1,6 @@
 # FE-Cookbook
 
-[![Travis](https://img.shields.io/travis/hijiangtao/FE-Cookbook/master.svg)]() [![Code Climate](https://img.shields.io/codeclimate/issues/github/hijiangtao/FE-Cookbook.svg)]() [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contribute) [![license](https://img.shields.io/github/license/hijiangtao/FE-Cookbook.svg)]()
+[![GitHub contributors](https://img.shields.io/github/contributors/hijiangtao/FE-Cookbook.svg)]() [![GitHub issues](https://img.shields.io/github/issues/hijiangtao/FE-Cookbook.svg)]() [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contribute) [![license](https://img.shields.io/github/license/hijiangtao/FE-Cookbook.svg)]() [![Travis](https://img.shields.io/travis/hijiangtao/FE-Cookbook/master.svg)]()
 
 这一年里，由于校招（实习 & 应届生招聘）以及在实验室做项目的缘故，一直在做前端开发/可视化研发相关的工作，并不断的为校招做准备，从日常大牛的博客、动态中能零零散散看到不少好的技术文章，同时在整个校招准备期间也看了不少前端书籍，包括《JavaScript 高级程序设计》、《JavaScript 语言精粹》、《HTML5高级程序设计》、《You Don't Know JS》系列、《CSS揭秘》等等，也针对很多方面的问题进行了细致的探索和查漏补缺，比如 CSS3 弹性盒布局、Hybrid App 唤起实现、Web 加载渲染性能、WebAssembly 等等，因此想通过这个项目把个人持续关注的前端相关内容汇总收集，一方面方便自己和其他同学日后查看、另一方面希望与有同样兴趣的同学一起将该项目完善壮大。
 
