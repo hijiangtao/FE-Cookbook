@@ -75,7 +75,7 @@
 
 ### Web 开发打包与未来技术
 
-* [webpack](http://webpack.github.io/)
+* [webpack](http://webpack.github.io/) | [webpack 学习与起步教程](./config/webpack.md) | [webpack 配置文件样例](./config/webpack.config.js)
 * [JSLint](http://www.jslint.com/) - The JavaScript Code Quality Tool
 * [WebAssembly](http://webassembly.org/) - A new portable, size- and load-time-efficient format suitable for compilation to the web.
 
