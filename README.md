@@ -1,5 +1,7 @@
 # FE-Cookbook
 
+[![Travis](https://img.shields.io/travis/hijiangtao/FE-Cookbook/master.svg)]() [![Code Climate](https://img.shields.io/codeclimate/issues/github/hijiangtao/FE-Cookbook.svg)]() [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contribute) [![license](https://img.shields.io/github/license/hijiangtao/FE-Cookbook.svg)]()
+
 这一年里，由于校招（实习 & 应届生招聘）以及在实验室做项目的缘故，一直在做前端开发/可视化研发相关的工作，并不断的为校招做准备，从日常大牛的博客、动态中能零零散散看到不少好的技术文章，同时在整个校招准备期间也看了不少前端书籍，包括《JavaScript 高级程序设计》、《JavaScript 语言精粹》、《HTML5高级程序设计》、《You Don't Know JS》系列、《CSS揭秘》等等，也针对很多方面的问题进行了细致的探索和查漏补缺，比如 CSS3 弹性盒布局、Hybrid App 唤起实现、Web 加载渲染性能、WebAssembly 等等，因此想通过这个项目把个人持续关注的前端相关内容汇总收集，一方面方便自己和其他同学日后查看、另一方面希望与有同样兴趣的同学一起将该项目完善壮大。
 
 本项目持续更新中，如果觉得有用欢迎给项目添加 Star；如果觉得有任何需要改进或者需要完善的地方，欢迎贡献代码提请 PR，针对无冲突的内容我会快速合并。希望为前端圈贡献一些自己的力量。
@@ -61,6 +63,7 @@
 * [在安卓设备上使用 Chrome 远程调试功能](http://wiki.jikexueyuan.com/project/chrome-devtools/remote-debugging-on-android.html)
 * [关于通过H5页面唤Native户端的介绍](https://github.com/AlanZhang001/H5CallUpNative)
 * [前端性能优化最佳实践](https://csspod.com/frontend-performance-best-practices/)
+* [Google 官方 PWA 天气预报程序代码](./PWA/) - 根据 Google 官方教程指导实现的天气预报 PWA 程序代码
 
 ### Web 开发利器
 
