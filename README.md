@@ -1,38 +1,43 @@
 # FE-Cookbook
 
-## Outline
+这一年里，由于校招（实习 & 应届生招聘）以及在实验室做项目的缘故，一直在做前端开发/可视化研发相关的工作，并不断的为校招做准备，从日常大牛的博客、动态中能零零散散看到不少好的技术文章，同时在整个校招准备期间也看了不少前端书籍，包括《JavaScript 高级程序设计》、《JavaScript 语言精粹》、《HTML5高级程序设计》、《You Don't Know JS》系列、《CSS揭秘》等等，也针对很多方面的问题进行了细致的探索和查漏补缺，比如 CSS3 弹性盒布局、Hybrid App 唤起实现、Web 加载渲染性能、WebAssembly 等等，因此想通过这个项目把个人持续关注的前端相关内容汇总收集，一方面方便自己和其他同学日后查看、另一方面希望与有同样兴趣的同学一起将该项目完善壮大。
 
-* [JavaScript](#javascript)
-* [Node.js]()
-* [HTML](#html)
-* [CSS](#css)
-* [Tools](#tools)
+本项目持续更新中，如果觉得有用欢迎给项目添加 Star；如果觉得有任何需要改进或者需要完善的地方，欢迎贡献代码提请 PR，针对无冲突的内容我会快速合并。希望为前端圈贡献一些自己的力量。
+
+根据个人理解，本项目分为以下六个部分，见目录
+
+## Outline / 目录
+
+* [JavaScript](#javascript) - JavaScript 相关的知识汇总，包括读书笔记、知识点整理和语言实现细节等；
+* [HTML](#html) - HTML 语言规范、读书笔记与新兴 API 介绍；
+* [CSS](#css) - CSS 语言规范、读书笔记与专题讲解等；
+* [Node.js](#nodejs) - NodeJS 相关技术细节与实现、读书笔记等；
+* [Tools](#tools) - Web 开发前沿技术与工程打包细节等内容整理；
+* [QA](#qa) - 校招/社招前端笔试面试题汇总，计划纳入上百道题，正在持续更新中；
+
+----
 
 ## JavaScript
 
-[Details](./JavaScript.md)
-
-## Node.js
-
-[Details](./Node.md)
+* [JavaScript 高级程序设计笔记](./JavaScript.md): 根据《JavaScript 高级程序设计》一书整理的知识点，将 JavaScript 及浏览器等相关内容梳理了一遍。
+* [You Don't Know JS 章节要点整理](./YDKJS.md): 《You Don't Know JS》一书共六本，根据每个章节总结的知识点进行罗列，可以快速阅览 JavaScript 不为人知的一些设计细节。
 
 ## HTML
 
+* [HTML5高级程序设计读书笔记](./HTML.md): 根据《HTML5高级程序设计》一书整理的有关 HTML5 新兴 API 相关的知识点。
+
+### 关键概念
+
 * [World Wide Web](https://en.wikipedia.org/wiki/World_Wide_Web)
 * [渲染性能](https://developers.google.com/web/fundamentals/performance/rendering/)
-
-[Details](./HTML.md)
 
 ## CSS
 
 ### CSS3
 
-* 通过使用 word-break 属性，可以让浏览器实现在任意位置的换行; white-space 属性设置如何处理元素内的空白。
+* [CSS3 知识点整理](./CSS3.md)
 
-> CSS 里，可替换元素（replaced element）的展现不是由CSS来控制的。这些元素是一类外观渲染独立于CSS的外部对象。典型的可替换元素有 `<img>, <object>, <video>` 和表单元素，如 `<textarea>, <input>`。 - [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)
-
-
-### Spots
+### 关键概念
 
 * [学习 CSS 布局](http://zh.learnlayout.com/)
 * [深入理解 CSS3 弹性盒布局模型](https://www.ibm.com/developerworks/cn/web/1409_chengfu_css3flexbox/)
@@ -42,31 +47,42 @@
 * [学习使用：before和：after伪元素](http://www.w3cplus.com/css3/learning-to-use-the-before-and-after-pseudo-elements-in-css.html)
 * [Android 浏览器文本垂直居中问题](http://imweb.io/topic/5848d0fc9be501ba17b10a94)
 
+## Node.js
+
+* [深入浅出 NodeJs 读书笔记](./Node.md)：完善中
+
 ## Tools
 
-### Web Related
+### Web 开发教程与最佳实践
 
-* [JavaScript equality table](http://dorey.github.io/JavaScript-Equality-Table/)
 * [HTTP协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
-* [Color Picker](http://colorizer.org/)
-* [Simple Icons](https://simpleicons.org/), SVG icons for popular brands
 * [How to center in CSS](http://howtocenterincss.com/)
 * [正则表达式30分钟入门教程](https://deerchao.net/tutorials/regex/regex.htm)
 * [在安卓设备上使用 Chrome 远程调试功能](http://wiki.jikexueyuan.com/project/chrome-devtools/remote-debugging-on-android.html)
 * [关于通过H5页面唤Native户端的介绍](https://github.com/AlanZhang001/H5CallUpNative)
 * [前端性能优化最佳实践](https://csspod.com/frontend-performance-best-practices/)
 
-### Ideas & Tools
+### Web 开发利器
 
 * [The birth and death of JavaScript](https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript)
-
 * [cssreference.io](http://cssreference.io/) - A free visual guide to CSS.
+* [JavaScript equality table](http://dorey.github.io/JavaScript-Equality-Table/)
+* [Color Picker](http://colorizer.org/)
+* [Simple Icons](https://simpleicons.org/), SVG icons for popular brands
 
-### Bundle
+### Web 开发打包与未来技术
 
 * [webpack](http://webpack.github.io/)
 * [JSLint](http://www.jslint.com/) - The JavaScript Code Quality Tool
 * [WebAssembly](http://webassembly.org/) - A new portable, size- and load-time-efficient format suitable for compilation to the web.
+
+## QA
+
+* [校招/社招前端笔试面试百题汇总](./Tricks.md)：由于从校招实习到校招提前批，一直在学习前端相关的基础知识并针对具体遇到的细节进行查漏补缺，零零散散发现很多内容值得反复回顾，所以将自己看到过认为还比较经典的题目汇总到这里，供大家参考。
+
+## Contribute
+
+非常欢迎为该项目增加内容，共同完善前端技术整理。请 Fork 之后提交代码后发起 PR。
 
 ## LICENSE
 
