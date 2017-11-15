@@ -59,6 +59,7 @@
 
 * [6 Reasons Why JavaScript’s Async/Await Blows Promises Away](https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9)
 * [An Introduction to Source Maps](http://blog.teamtreehouse.com/introduction-source-maps)
+* [How to use SVG as a Placeholder, and Other Image Loading Techniques](https://medium.freecodecamp.org/using-svg-as-placeholders-more-image-loading-techniques-bed1b810ab2c)
 
 ### Web 开发教程与最佳实践
 
