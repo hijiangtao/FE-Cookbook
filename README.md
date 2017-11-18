@@ -14,7 +14,7 @@
 * [HTML](#html) - HTML 语言规范、读书笔记与新兴 API 介绍；
 * [CSS](#css) - CSS 语言规范、读书笔记与专题讲解等；
 * [Node.js](#nodejs) - NodeJS 相关技术细节与实现、读书笔记等；
-* [Tools](#tools) - Web 开发前沿技术与工程打包细节等内容整理；
+* [Tools & Codes](#tools) - Web 开发前沿技术与工程打包细节等内容整理；
 * [QA](#qa) - 校招/社招前端笔试面试题汇总，计划纳入上百道题，正在持续更新中；
 
 ----
@@ -53,14 +53,16 @@
 
 * [深入浅出 NodeJs 读书笔记](./Node.md)：完善中
 
-## Tools
+## Tools & Codes
 
 ### 前端相关基础技术文章
 
+<<<<<<< HEAD
 1. [Understanding JavaScript’s async await](https://ponyfoo.com/articles/understanding-javascript-async-await)
 2. [6 Reasons Why JavaScript’s Async/Await Blows Promises Away](https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9)
 3. [An Introduction to Source Maps](http://blog.teamtreehouse.com/introduction-source-maps)
 4. [Babel 入门教程](http://www.ruanyifeng.com/blog/2016/01/babel.html)
+5. [How to use SVG as a Placeholder, and Other Image Loading Techniques](https://medium.freecodecamp.org/using-svg-as-placeholders-more-image-loading-techniques-bed1b810ab2c)
 
 ### Web 开发教程与最佳实践
 
@@ -70,7 +72,7 @@
 * [在安卓设备上使用 Chrome 远程调试功能](http://wiki.jikexueyuan.com/project/chrome-devtools/remote-debugging-on-android.html)
 * [关于通过H5页面唤Native户端的介绍](https://github.com/AlanZhang001/H5CallUpNative)
 * [前端性能优化最佳实践](https://csspod.com/frontend-performance-best-practices/)
-* [Google 官方 PWA 天气预报程序代码](./PWA/) - 根据 Google 官方教程指导实现的天气预报 PWA 程序代码
+* [The Cost Of JavaScript](https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e)
 
 ### Web 开发利器
 
@@ -85,6 +87,10 @@
 * [webpack](http://webpack.github.io/) | [webpack 学习与起步教程](./config/webpack.md) | [webpack 配置文件样例](./config/webpack.config.js)
 * [JSLint](http://www.jslint.com/) - The JavaScript Code Quality Tool
 * [WebAssembly](http://webassembly.org/) - A new portable, size- and load-time-efficient format suitable for compilation to the web.
+
+### 示例代码
+
+* [Google 官方 PWA 天气预报程序代码](./PWA/) - 根据 Google 官方教程指导实现的天气预报 PWA 程序代码
 
 ## QA
 
