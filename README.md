@@ -69,6 +69,7 @@
 * [在安卓设备上使用 Chrome 远程调试功能](http://wiki.jikexueyuan.com/project/chrome-devtools/remote-debugging-on-android.html)
 * [关于通过H5页面唤Native户端的介绍](https://github.com/AlanZhang001/H5CallUpNative)
 * [前端性能优化最佳实践](https://csspod.com/frontend-performance-best-practices/)
+* [The Cost Of JavaScript](https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e)
 * [Google 官方 PWA 天气预报程序代码](./PWA/) - 根据 Google 官方教程指导实现的天气预报 PWA 程序代码
 
 ### Web 开发利器
