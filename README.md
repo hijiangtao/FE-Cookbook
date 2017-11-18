@@ -14,7 +14,7 @@
 * [HTML](#html) - HTML 语言规范、读书笔记与新兴 API 介绍；
 * [CSS](#css) - CSS 语言规范、读书笔记与专题讲解等；
 * [Node.js](#nodejs) - NodeJS 相关技术细节与实现、读书笔记等；
-* [Tools & Codes](#tools) - Web 开发前沿技术与工程打包细节等内容整理；
+* [Tools & Codes](#tools--codes) - Web 开发前沿技术与工程打包细节等内容整理；
 * [QA](#qa) - 校招/社招前端笔试面试题汇总，计划纳入上百道题，正在持续更新中；
 
 ----
@@ -57,7 +57,6 @@
 
 ### 前端相关基础技术文章
 
-<<<<<<< HEAD
 1. [Understanding JavaScript’s async await](https://ponyfoo.com/articles/understanding-javascript-async-await)
 2. [6 Reasons Why JavaScript’s Async/Await Blows Promises Away](https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9)
 3. [An Introduction to Source Maps](http://blog.teamtreehouse.com/introduction-source-maps)
