@@ -63,6 +63,7 @@
 4. [Babel 入门教程](http://www.ruanyifeng.com/blog/2016/01/babel.html)
 5. [How to use SVG as a Placeholder, and Other Image Loading Techniques](https://medium.freecodecamp.org/using-svg-as-placeholders-more-image-loading-techniques-bed1b810ab2c)
 6. [Understanding Node.js Event-Driven Architecture](https://medium.freecodecamp.org/understanding-node-js-event-driven-architecture-223292fcbc2d)
+7. [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://developer.ibm.com/node/2014/11/11/compare-javascript-templates-jade-mustache-dust/)
 
 ### Web 开发教程与最佳实践
 
