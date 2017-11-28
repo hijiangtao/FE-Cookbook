@@ -83,6 +83,7 @@
 * [JavaScript equality table](http://dorey.github.io/JavaScript-Equality-Table/)
 * [Color Picker](http://colorizer.org/)
 * [Simple Icons](https://simpleicons.org/), SVG icons for popular brands
+* [Web Page Test](https://www.webpagetest.org/) - Test a website's performance
 
 ### Web 开发打包与未来技术
 
