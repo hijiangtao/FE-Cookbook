@@ -65,6 +65,7 @@
 6. [Understanding Node.js Event-Driven Architecture](https://medium.freecodecamp.org/understanding-node-js-event-driven-architecture-223292fcbc2d)
 7. [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://developer.ibm.com/node/2014/11/11/compare-javascript-templates-jade-mustache-dust/)
 8. [JSON Web Tokens vs. Session Cookies In Practice](https://ponyfoo.com/articles/json-web-tokens-vs-session-cookies)
+9. [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
 
 ### Web 开发教程与最佳实践
 
