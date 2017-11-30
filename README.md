@@ -84,6 +84,7 @@
 * [Color Picker](http://colorizer.org/)
 * [Simple Icons](https://simpleicons.org/), SVG icons for popular brands
 * [Web Page Test](https://www.webpagetest.org/) - Test a website's performance
+* [Web Manifest Validator](https://manifest-validator.appspot.com/) - Test the validity of a Web Manifest
 
 ### Web 开发打包与未来技术
 
