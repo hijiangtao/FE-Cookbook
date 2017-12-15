@@ -67,6 +67,7 @@
 8. [JSON Web Tokens vs. Session Cookies In Practice](https://ponyfoo.com/articles/json-web-tokens-vs-session-cookies)
 9. [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
 10. [Why (and how) to use eslint in your project](https://medium.com/the-node-js-collection/why-and-how-to-use-eslint-in-your-project-742d0bc61ed7)
+11. [Speed up Your Node.js App with Native Addons](https://medium.com/the-node-js-collection/speed-up-your-node-js-app-with-native-addons-5e76a06f4a40)
 
 ### Web 开发教程与最佳实践
 
