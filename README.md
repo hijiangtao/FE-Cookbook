@@ -80,6 +80,7 @@
 * [关于通过H5页面唤Native户端的介绍](https://github.com/AlanZhang001/H5CallUpNative)
 * [前端性能优化最佳实践](https://csspod.com/frontend-performance-best-practices/)
 * [The Cost Of JavaScript](https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e)
+* [SSL/TLS协议运行机制的概述](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html) | [图解SSL/TLS协议](http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html)
 
 ### Web 开发利器
 
