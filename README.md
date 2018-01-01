@@ -81,6 +81,7 @@
 * [前端性能优化最佳实践](https://csspod.com/frontend-performance-best-practices/)
 * [The Cost Of JavaScript](https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e)
 * [SSL/TLS协议运行机制的概述](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html) | [图解SSL/TLS协议](http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html)
+* The 12-Factor App - [简体中文](https://12factor.net/zh_cn/) | [原版](https://12factor.net/)
 
 ### Web 开发利器
 
