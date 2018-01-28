@@ -72,6 +72,17 @@
 12. [Ten Things A Serious JavaScript Developer Should Learn](https://benmccormick.org/2017/07/19/ten-things-javascript/)
 13. [Await and Async Explained with Diagrams and Examples](http://nikgrozev.com/2017/10/01/async-await/)
 14. [But really, what is a JavaScript test?](https://blog.kentcdodds.com/but-really-what-is-a-javascript-test-46fe5f3fad77)
+15. [What the Fu*k JavaScript: A list of funny and tricky JavaScript examples](https://github.com/denysdovhan/wtfjs?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+16. [Modern JavaScript Explained For Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+17. [Modern JavaScript for Ancient Web Developers](https://trackchanges.postlight.com/modern-javascript-for-ancient-web-developers-58e7cae050f9?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+18. [The Basics of DOM Manipulation in Vanilla JavaScript (No jQuery) — SitePoint](https://www.sitepoint.com/dom-manipulation-vanilla-javascript-no-jquery?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+19. [The Cost Of JavaScript - Addy Osmani](https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+20. [JavaScript Start-up Performance - Addy Osmani](https://medium.com/@addyosmani/javascript-start-up-performance-69200f43b201?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+21. [How JavaScript works: memory management + how to handle 4 common memory leaks](https://blog.sessionstack.com/how-javascript-works-memory-management-how-to-handle-4-common-memory-leaks-3f28b94cfbec?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+22. [How JavaScript works: Event loop and the rise of Async programming + 5 ways to better coding with async/await](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+23. [How JavaScript works: inside the V8 engine + 5 tips on how to write optimized code](https://blog.sessionstack.com/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code-ac089e62b12e?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+24. [Understanding V8’s Bytecode](https://medium.com/dailyjs/understanding-v8s-bytecode-317d46c94775?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+25. [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
 
 ### Web 开发教程与最佳实践
 
@@ -86,6 +97,9 @@
 * The 12-Factor App - [简体中文](https://12factor.net/zh_cn/) | [原版](https://12factor.net/)
 * [JavaScript 运行机制详解：再谈Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)
 * [web worker详解](http://xgfe.github.io/2017/05/03/LexHuang/web-worker/)
+* [A simple interactive ES6 Feature list](https://codetower.github.io/es6-features?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+* [Airbnb Javascript Styleguide](https://github.com/airbnb/javascript?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+* [How I rediscovered my love for JavaScript after throwing 90% of it in the trash.](https://hackernoon.com/how-i-rediscovered-my-love-for-javascript-after-throwing-90-of-it-in-the-trash-f1baed075d1b?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
 
 ### Web 开发利器
 
@@ -96,6 +110,8 @@
 * [Simple Icons](https://simpleicons.org/), SVG icons for popular brands
 * [Web Page Test](https://www.webpagetest.org/) - Test a website's performance
 * [Web Manifest Validator](https://manifest-validator.appspot.com/) - Test the validity of a Web Manifest
+* [Modern-js-cheatsheet: Cheatsheet for the JavaScript knowledge you will frequently encounter in modern projects.](https://github.com/mbeaudru/modern-js-cheatsheet?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+
 
 ### Web 开发打包与未来技术
 
@@ -110,8 +126,9 @@
 ## QA
 
 * [校招/社招前端笔试面试百题汇总](./Tricks.md)：由于从校招实习到校招提前批，一直在学习前端相关的基础知识并针对具体遇到的细节进行查漏补缺，零零散散发现很多内容值得反复回顾，所以将自己看到过认为还比较经典的题目汇总到这里，供大家参考。
+* [用 JavaScript 刷 LeetCode](https://github.com/hijiangtao/LeetCodeOJ)
 
-## 计算机生态技术文章
+## 计算机科学技术文章
 
 * [Docker 核心技术与实现原理](https://draveness.me/docker)
 
