@@ -53,6 +53,7 @@
 ## Node.js
 
 * [深入浅出 NodeJs 读书笔记](./Node.md)：完善中
+* [深入理解 Node.js：核心思想与源码分析](https://yjhjstz.gitbooks.io/deep-into-node/content/)
 
 ## Tools & Codes
 
@@ -100,8 +101,10 @@
 * [A simple interactive ES6 Feature list](https://codetower.github.io/es6-features?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
 * [Airbnb Javascript Styleguide](https://github.com/airbnb/javascript?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
 * [How I rediscovered my love for JavaScript after throwing 90% of it in the trash.](https://hackernoon.com/how-i-rediscovered-my-love-for-javascript-after-throwing-90-of-it-in-the-trash-f1baed075d1b?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+* [80 Linux Monitoring Tools](https://blog.serverdensity.com/80-linux-monitoring-tools-know/)
+* [The Modern JavaScript Tutorial](http://javascript.info/)
 
-### Web 开发利器
+### Web 开发利器与书籍
 
 * [The birth and death of JavaScript](https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript)
 * [cssreference.io](http://cssreference.io/) - A free visual guide to CSS.
@@ -111,6 +114,10 @@
 * [Web Page Test](https://www.webpagetest.org/) - Test a website's performance
 * [Web Manifest Validator](https://manifest-validator.appspot.com/) - Test the validity of a Web Manifest
 * [Modern-js-cheatsheet: Cheatsheet for the JavaScript knowledge you will frequently encounter in modern projects.](https://github.com/mbeaudru/modern-js-cheatsheet?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+* [Exploring ES2018 and ES2019](http://exploringjs.com/es2018-es2019/index.html)
+* [Git Cheat Sheet](./sheet/zt_git_cheat_sheet.pdf)
+* [PreLoaders](https://icons8.com/preloaders/) - Loading 动画收集网站
+* [Modernizr](https://github.com/Modernizr/Modernizr) - 针对浏览器中的 HTML5 和 CSS3 功能支持度检测库
 
 
 ### Web 开发打包与未来技术
@@ -131,6 +138,7 @@
 ## 计算机科学技术文章
 
 * [Docker 核心技术与实现原理](https://draveness.me/docker)
+* [关系型数据库工作原理](http://blog.jobbole.com/100349/)
 
 ## Contribute
 
