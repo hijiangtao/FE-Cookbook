@@ -164,7 +164,7 @@ iframe会不利于搜索引擎优化
 
 #### 12. 常见的浏览器内核有哪些？
 
-浏览器内核又可以分成两部分：渲染引擎(layout engineer 或者 Rendering Engine)和 JS 引擎。常见的浏览器内核可以分这四种：Trident、Gecko、Blink、Webkit，此处指浏览器内核。
+**答**：浏览器内核又可以分成两部分：渲染引擎(layout engineer 或者 Rendering Engine)和 JS 引擎。常见的浏览器内核可以分这四种：Trident、Gecko、Blink、Webkit，此处指浏览器内核。
 
 * Trident 为 IE 内核，又称 MSHTML
 * Gecko 内核：Netscape6 开始采用的内核，后来的 Mozilla FireFox(火狐浏览器) 也采用了该内核
@@ -173,6 +173,25 @@ iframe会不利于搜索引擎优化
 * Presto 内核：Presto 是挪威产浏览器 opera 的 “前任” 内核，最新的 opera 浏览器内核现为 Blink
 * 移动端：目前移动设备浏览器上常用的内核有 Webkit，Blink，Trident，Gecko 等，其中 iPhone 和 iPad 等苹果 iOS 平台主要是 WebKit，Android 4.4 之前的 Android 系统浏览器内核是 WebKit，Android4.4 系统浏览器切换到了Chromium，内核是 Webkit 的分支 Blink，Windows Phone 8 系统浏览器内核是 Trident
 
+#### 13. 如何避免浏览器回流与重绘？
+
+**答**：
+
+CSS 方面
+
+* 避免使用 table 布局。
+* 尽可能在 DOM 树的最末端改变 class。
+* 避免设置多层内联样式。
+* 将动画效果应用到 position 属性为 absolute 或 fixed 的元素上。
+* 避免使用 CSS 表达式（例如：`calc()`）。
+
+JavaScript 方面
+
+* 避免频繁操作样式，最好一次性重写 style 属性，或者将样式列表定义为 class 并一次性更改 class 属性。
+* 避免频繁操作 DOM，创建一个 documentFragment，在它上面应用所有 DOM 操作，最后再把它添加到文档中。
+* 也可以先为元素设置 `display: none`，操作结束后再把它显示出来。因为在 display 属性为 none 的元素上进行的 DOM 操作不会引发回流和重绘。
+* 避免频繁读取会引发回流/重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。
+* 对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。
 
 ## JavaScript
 
