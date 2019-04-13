@@ -84,6 +84,8 @@
 23. [How JavaScript works: inside the V8 engine + 5 tips on how to write optimized code](https://blog.sessionstack.com/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code-ac089e62b12e?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
 24. [Understanding V8’s Bytecode](https://medium.com/dailyjs/understanding-v8s-bytecode-317d46c94775?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
 25. [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
+26. [Build a state management system with vanilla JavaScript](https://css-tricks.com/build-a-state-management-system-with-vanilla-javascript/)
+27. [Inside look at modern web browser (part 2)](https://developers.google.com/web/updates/2018/09/inside-browser-part2)
 
 ### Web 开发教程与最佳实践
 
@@ -103,6 +105,7 @@
 * [How I rediscovered my love for JavaScript after throwing 90% of it in the trash.](https://hackernoon.com/how-i-rediscovered-my-love-for-javascript-after-throwing-90-of-it-in-the-trash-f1baed075d1b?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
 * [80 Linux Monitoring Tools](https://blog.serverdensity.com/80-linux-monitoring-tools-know/)
 * [The Modern JavaScript Tutorial](http://javascript.info/)
+* [Abortable fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch)
 
 ### Web 开发利器与书籍
 
