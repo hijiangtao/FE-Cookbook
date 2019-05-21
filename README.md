@@ -2,7 +2,7 @@
 
 [![GitHub contributors](https://img.shields.io/github/contributors/hijiangtao/FE-Cookbook.svg)]() [![GitHub issues](https://img.shields.io/github/issues/hijiangtao/FE-Cookbook.svg)]() [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contribute) [![license](https://img.shields.io/github/license/hijiangtao/FE-Cookbook.svg)]() [![Travis](https://img.shields.io/travis/hijiangtao/FE-Cookbook/master.svg)]()
 
-这一年里，由于校招（实习 & 应届生招聘）以及在实验室做项目的缘故，一直在做前端开发/可视化研发相关的工作，并不断的为校招做准备，从日常大牛的博客、动态中能零零散散看到不少好的技术文章，同时在整个校招准备期间也看了不少前端书籍，包括《JavaScript 高级程序设计》、《JavaScript 语言精粹》、《HTML5高级程序设计》、《You Don't Know JS》系列、《CSS揭秘》等等，也针对很多方面的问题进行了细致的探索和查漏补缺，比如 CSS3 弹性盒布局、Hybrid App 唤起实现、Web 加载渲染性能、WebAssembly 等等，因此想通过这个项目把个人持续关注的前端相关内容汇总收集，一方面方便自己和其他同学日后查看、另一方面希望与有同样兴趣的同学一起将该项目完善壮大。
+在从事前端开发的时光中，从日常大牛的博客、动态中能零零散散看到不少好的技术文章，同时也看了不少前端书籍，包括《JavaScript 高级程序设计》、《JavaScript 语言精粹》、《HTML5高级程序设计》、《You Don't Know JS》系列、《CSS揭秘》等等，也针对很多方面的问题进行了细致的探索和查漏补缺，比如 CSS3 弹性盒布局、Hybrid App 唤起实现、Web 加载渲染性能、WebAssembly 等等，因此想通过这个项目把个人持续关注的前端相关内容汇总收集，一方面方便自己和其他同学日后查看、另一方面希望与有同样兴趣的同学一起将该项目完善壮大。
 
 本项目持续更新中，如果觉得有用欢迎给项目添加 Star；如果觉得有任何需要改进或者需要完善的地方，欢迎贡献代码提请 PR，针对无冲突的内容我会快速合并。希望为前端圈贡献一些自己的力量。
 
@@ -128,6 +128,16 @@
 * [webpack](http://webpack.github.io/) | [webpack 学习与起步教程](./config/webpack.md) | [webpack 配置文件样例](./config/webpack.config.js)
 * [JSLint](http://www.jslint.com/) - The JavaScript Code Quality Tool
 * [WebAssembly](http://webassembly.org/) - A new portable, size- and load-time-efficient format suitable for compilation to the web.
+* [wasm-pack](https://github.com/rustwasm/wasm-pack) - rust -> wasm workflow tool!
+
+#### WebAssembly 中文教程资源
+
+* WebAssembly 系列（一）[生动形象地介绍 WebAssembly](https://zhuanlan.zhihu.com/p/25800318)
+* WebAssembly 系列（二）[JavaScript Just-in-time (JIT) 工作原理](https://zhuanlan.zhihu.com/p/25669120)
+* WebAssembly 系列（三）[编译器如何生成汇编](https://zhuanlan.zhihu.com/p/25718411)
+* WebAssembly 系列（四）[WebAssembly 工作原理](https://zhuanlan.zhihu.com/p/25754084)
+* WebAssembly 系列（五）[为什么 WebAssembly 更快](https://zhuanlan.zhihu.com/p/25773367)
+* WebAssembly 系列（六）[WebAssembly 的现在与未来](https://zhuanlan.zhihu.com/p/25799683)
 
 ### 示例代码
 
