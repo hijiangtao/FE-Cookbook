@@ -86,6 +86,7 @@
 25. [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf?utm_source=mybridge&utm_medium=email&utm_campaign=read_more)
 26. [Build a state management system with vanilla JavaScript](https://css-tricks.com/build-a-state-management-system-with-vanilla-javascript/)
 27. [Inside look at modern web browser (part 2)](https://developers.google.com/web/updates/2018/09/inside-browser-part2)
+28. \[Paper\] [Measuring the User Experience on a Large Scale: User-Centered Metrics for Web Applications](./assets/pdf/36299.pdf)
 
 ### Web 开发教程与最佳实践
 
@@ -106,6 +107,7 @@
 * [80 Linux Monitoring Tools](https://blog.serverdensity.com/80-linux-monitoring-tools-know/)
 * [The Modern JavaScript Tutorial](http://javascript.info/)
 * [Abortable fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch)
+* [Removing jQuery from GitHub.com frontend](https://githubengineering.com/removing-jquery-from-github-frontend/)
 
 ### Web 开发利器与书籍
 
@@ -122,13 +124,19 @@
 * [PreLoaders](https://icons8.com/preloaders/) - Loading 动画收集网站
 * [Modernizr](https://github.com/Modernizr/Modernizr) - 针对浏览器中的 HTML5 和 CSS3 功能支持度检测库
 
-
 ### Web 开发打包与未来技术
 
 * [webpack](http://webpack.github.io/) | [webpack 学习与起步教程](./config/webpack.md) | [webpack 配置文件样例](./config/webpack.config.js)
 * [JSLint](http://www.jslint.com/) - The JavaScript Code Quality Tool
 * [WebAssembly](http://webassembly.org/) - A new portable, size- and load-time-efficient format suitable for compilation to the web.
 * [wasm-pack](https://github.com/rustwasm/wasm-pack) - rust -> wasm workflow tool!
+* Dependency injection
+  - [Dependency injection in JavaScript](https://krasimirtsonev.com/blog/article/Dependency-injection-in-JavaScript)
+  - [控制反转](https://zh.wikipedia.org/wiki/%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC)
+
+### 会议
+
+* ELECTRON & DESKTOP JS <http://www.covalenceconf.com/>
 
 #### WebAssembly 中文教程资源
 
