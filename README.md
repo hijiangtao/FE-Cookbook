@@ -123,6 +123,8 @@
 * [Git Cheat Sheet](./sheet/zt_git_cheat_sheet.pdf)
 * [PreLoaders](https://icons8.com/preloaders/) - Loading 动画收集网站
 * [Modernizr](https://github.com/Modernizr/Modernizr) - 针对浏览器中的 HTML5 和 CSS3 功能支持度检测库
+* [Webpack Visualizer](https://chrisbateman.github.io/webpack-visualizer/)
+* [Source Map Explorer](https://github.com/danvk/source-map-explorer)
 
 ### Web 开发打包与未来技术
 
