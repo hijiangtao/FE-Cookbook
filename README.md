@@ -23,7 +23,7 @@
 ## JavaScript
 
 * [JavaScript 高级程序设计笔记](./JavaScript.md): 根据《JavaScript 高级程序设计》一书整理的知识点，将 JavaScript 及浏览器等相关内容梳理了一遍。
-* [You Don't Know JS 章节要点整理](./YDKJS.md): 《You Don't Know JS》一书共六本，根据每个章节总结的知识点进行罗列，可以快速阅览 JavaScript 不为人知的一些设计细节。
+* [You Don't Know JS 章节要点整理](./YDKJS.md): 《You Don't Know JS》一书共六本，根据每个章节总结的知识点进行罗列，可以快速阅览 JavaScript 不为人知的一些设计细节，中文书籍见 [GitBook](https://hijiangtao.gitbook.io/ydkjs/)。
 
 ## HTML
 
