@@ -87,6 +87,7 @@
 26. [Build a state management system with vanilla JavaScript](https://css-tricks.com/build-a-state-management-system-with-vanilla-javascript/)
 27. [Inside look at modern web browser (part 2)](https://developers.google.com/web/updates/2018/09/inside-browser-part2)
 28. \[Paper\] [Measuring the User Experience on a Large Scale: User-Centered Metrics for Web Applications](./assets/pdf/36299.pdf)
+29. [Mouse events basics](https://javascript.info/mouse-events-basics)
 
 ### Web 开发教程与最佳实践
 
