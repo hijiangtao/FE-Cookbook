@@ -193,6 +193,42 @@ JavaScript 方面
 * 避免频繁读取会引发回流/重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。
 * 对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。
 
+#### 14. 介绍一下 React JSX
+
+答：它是一个JavaScript 的语法扩充，基本上，JSX 单纯只是 `React.createElement(component, props, ...children)` function 的一个语法糖，它的工作原理基本可以用以下这个例子诠释
+
+```jsx
+// 1
+const element = (
+  <h1 className="greeting">
+    Hello, World!
+  </h1>
+);
+
+// 2
+const element = {
+  type: 'h1',
+  props: {
+    className: 'greeting',
+    children: 'Hello, world!'
+  }
+};
+
+// 3
+const element = React.createElement(
+  'h1',
+  {className: 'greeting'},
+  'Hello, World!'
+);
+```
+
+### 15. 介绍 Vue template
+
+答：Vue template 模板编译的过程经过 parse() 生成抽象语法树，再经过 optimize 对静态节点优化，最后通过 generate() 生成 render 字符串
+之后调用 new Watcher() 函数，用来监听数据的变化，render 函数就是数据监听的回调所调用的，其结果便是重新生成 Vnode。
+
+当这个 render 函数字符串在第一次 mount、或者绑定的数据更新的时候，都会被调用，生成 Vnode。
+如果是数据的更新，那么 Vnode 会与数据改变之前的 Vnode 做 diff，对内容做改动之后，就会更新到我们真正的 DOM。
 ## JavaScript
 
 #### 1. ECMAScript/JavaScript 中都有那些数据类型？
@@ -384,11 +420,11 @@ let sub = new Sub();
 {} + []; // 0
 ```
 
-**答**：在第一行中，{}出现在+操作符的表达式中，因此被翻译为一个实际的值（一个空object）。而[]被强制转换为""因此{}也会被强制转换为一个string："[object Object]"。但在第二行中，{}被翻译为一个独立的{}空代码块儿（它什么也不做）。块儿不需要分号来终结它们，所以这里缺少分号不是一个问题。最终，+ []是一个将[]明确强制转换 为number的表达式，而它的值是0。
+**答**：在第一行中，`{}`出现在+操作符的表达式中，因此被翻译为一个实际的值（一个空 object）。而`[]`被强制转换为`""`因此`{}`也会被强制转换为一个 string："[object Object]"。但在第二行中，`{}`被翻译为一个独立的`{}`空代码块儿（它什么也不做）。块儿不需要分号来终结它们，所以这里缺少分号不是一个问题。最终，`+ []` 是一个将 `[]` 明确强制转换为 number的表达式，而它的值是0。
 
 #### 10. 什么是事件委托？
 
-**答**：：事件委托，通俗地来讲，就是把一个元素响应事件（click、keydown……）的函数委托到另一个元素；一般来讲，会把一个或者一组元素的事件委托到它的父层或者更外层元素上，真正绑定事件的是外层元素，当事件响应到需要绑定的元素上时，会通过事件冒泡机制从而触发它的外层元素的绑定事件上，然后在外层元素上去执行函数。事件委托的好处包括：动态绑定事件与减少内存消耗。
+**答**：事件委托，通俗地来讲，就是把一个元素响应事件（click、keydown……）的函数委托到另一个元素；一般来讲，会把一个或者一组元素的事件委托到它的父层或者更外层元素上，真正绑定事件的是外层元素，当事件响应到需要绑定的元素上时，会通过事件冒泡机制从而触发它的外层元素的绑定事件上，然后在外层元素上去执行函数。事件委托的好处包括：动态绑定事件与减少内存消耗。
 
 #### 11. JavaScript 与 HTML 之间交互的事件模型分为几个阶段？
 
@@ -414,6 +450,151 @@ let sub = new Sub();
 2. event.pageX、event.pageY: 鼠标相对于整个页面的X/Y坐标。注意，整个页面的意思就是你整个网页的全部，比如说网页很宽很长，宽2000px，高3000px，那pageX, pageY的最大值就是它们了。**特别说明：IE不支持！**
 3. screenX、screenY: 鼠标相对于用户显示器屏幕左上角的X, Y坐标。
 4. event.offsetX、event.offsetY: 鼠标相对于事件父容器（srcElement）的X, Y坐标。**特别说明：只有IE支持！**
+
+#### 14. 简单介绍下 `requestAnimationFrame` 和 `requestIdleCallback` API 及使用场景
+
+`window.requestAnimationFrame()` 告诉浏览器——你希望执行一个动画，并且要求浏览器在下次重绘之前调用指定的回调函数更新动画。该方法需要传入一个回调函数作为参数，该回调函数会在浏览器下一次重绘之前执行。
+
+回调函数会被传入 `DOMHighResTimeStamp` 参数，`DOMHighResTimeStamp` 指示当前被 `requestAnimationFrame()` 排序的回调函数被触发的时间，同一帧内多次调用时间参数相同。
+
+`window.requestIdleCallback()` 方法将在浏览器的空闲时段内调用的函数排队，它维护一个队列，将在浏览器空闲时间内执行。它属于 Background Tasks API。可以使用 timeout 参数来强制指定“保证执行最晚时长”。
+
+注意点1：在大多数遵循 W3C 建议的浏览器中，回调函数执行次数通常与浏览器屏幕刷新次数相匹配。为了提高性能和电池寿命，因此在大多数浏览器里，当 `requestAnimationFrame()` 运行在后台标签页或者隐藏的 `<iframe>` 里时，`requestAnimationFrame()` 会被暂停调用以提升性能和电池寿命。
+
+注意点2：`requestIdleCallback` 在 safari 中暂未支持，在使用时有几点注意
+
+1. 执行重计算而非紧急任务
+2. 空闲回调执行时间应该小于 50ms，最好更少
+3. 空闲回调中不要操作 DOM，因为它本来就是利用的重排重绘后的间隙空闲时间，重新操作 DOM 又会造成重排重绘
+
+#### 15. 介绍下 generator
+
+答：
+
+Generator 函数是协程在 ES6 的实现，最大特点就是可以交出函数的执行权（即暂停执行）。
+
+```
+function* gen(x){
+  var y = yield x + 2;
+  return y;
+}
+```
+
+上面代码就是一个 Generator 函数。它不同于普通函数，是可以暂停执行的，所以函数名之前要加星号，以示区别。
+
+整个 Generator 函数就是一个封装的异步任务，或者说是异步任务的容器。异步操作需要暂停的地方，都用 yield 语句注明。Generator 函数的执行方法如下。
+
+```
+var g = gen(1);
+g.next() // { value: 3, done: false }
+g.next() // { value: undefined, done: true }
+```
+
+上面代码中，调用 Generator 函数，会返回一个内部指针（即遍历器 ）g 。这是 Generator 函数不同于普通函数的另一个地方，即执行它不会返回结果，返回的是指针对象。调用指针 g 的 next 方法，会移动内部指针（即执行异步任务的第一段），指向第一个遇到的 yield 语句，上例是执行到 x + 2 为止。
+
+换言之，next 方法的作用是分阶段执行 Generator 函数。每次调用 next 方法，会返回一个对象，表示当前阶段的信息（ value 属性和 done 属性）。value 属性是 yield 语句后面表达式的值，表示当前阶段的值；done 属性是一个布尔值，表示 Generator 函数是否执行完毕，即是否还有下一个阶段。
+
+#### 16. 各类模块化加载方案介绍
+
+答：CommonJS、AMD、CMD、UMD、ES Modules，参考 [JavaScript 模块化方案总结](https://hijiangtao.github.io/2019/08/25/JavaScript-Module-Definitions-and-Webpack-Configurations-Notes/)
+
+#### 17. 依据 CommonJS 和 ES Modules 的区别，简单介绍下 JavaScript 模块的循环加载
+
+答：
+
+CommonJS 加载原理。CommonJS 的一个模块，就是一个脚本文件。require 命令第一次加载该脚本，就会执行整个脚本，然后在内存生成一个对象。
+
+```
+{
+  id: '...',
+  exports: { ... },
+  loaded: true,
+  ...
+}
+```
+
+上面代码中，该对象的 id 属性是模块名，exports 属性是模块输出的各个接口，loaded 属性是一个布尔值，表示该模块的脚本是否执行完毕。其他还有很多属性，这里省略。
+
+以后需要用到这个模块的时候，就会到 exports 属性上面取值。即使再次执行 require 命令，也不会再次执行该模块，而是到缓存之中取值。
+
+CommonJS 模块的重要特性是加载时执行，即脚本代码在 require 的时候，就会全部执行。CommonJS 的做法是，一旦出现某个模块被"循环加载"，就只输出已经执行的部分，还未执行的部分不会输出。
+
+看一个示例：
+
+```
+// a.js:
+console.log('a starting');
+exports.done = false;
+const b = require('./b.js');
+console.log('in a, b.done = %j', b.done);
+exports.done = true;
+console.log('a done');
+
+// b.js:
+console.log('b starting');
+exports.done = false;
+const a = require('./a.js');
+console.log('in b, a.done = %j', a.done);
+exports.done = true;
+console.log('b done');
+
+// main.js:
+console.log('main starting');
+const a = require('./a.js');
+const b = require('./b.js');
+console.log('in main, a.done = %j, b.done = %j', a.done, b.done);
+```
+
+输出应该如下：
+
+```
+$ node main.js
+main starting
+a starting
+b starting
+in b, a.done = false
+b done
+in a, b.done = true
+a done
+in main, a.done = true, b.done = true
+```
+
+ES6 模块的运行机制与 CommonJS 不一样，它遇到模块加载命令 import 时，不会去执行模块，而是只生成一个引用。等到真的需要用到时，再到模块里面去取值。
+
+因此，ES6模块是动态引用，不存在缓存值的问题，而且模块里面的变量，绑定其所在的模块。请看下面的例子。
+
+```
+// even.js
+  import { odd } from './odd'
+
+  export var counter = 0;
+
+  export function even(n) {
+    counter++;
+    return n == 0 || odd(n - 1);
+  }
+
+// odd.js
+  import { even } from './even';
+
+  export function odd(n) {
+    return n != 0 && even(n - 1);
+  }
+
+// Test
+  System.import('even').then(function(m) {
+    m.even(10);
+    m.counter; // 6
+    m.even(20);
+    m.counter; // 17
+  });
+```
+
+参考 <http://www.ruanyifeng.com/blog/2015/11/circular-dependency.html>，代码示例见 <https://nodejs.org/api/modules.html#modules_cycles>
+
+#### 18. 什么是装饰器模式
+
+TBD
 
 ## CSS
 
@@ -484,6 +665,10 @@ Data URL也有一些不适用的场合：
 #### 2. 在每个 package.json 的 dependency 中都会有很多软件名以及随之跟上的版本号，例如 `"d3": "^3.9.0"` 或者 `"d3": "~3.9.0"`，请问 "^" 和 "~" 的含义分别是什么？
 
 **答**：根据 ["npm install --save" No Longer Using Tildes](http://fredkschott.com/post/2014/02/npm-no-longer-defaults-to-tildes/) 一文可知，形如波浪号的编号（例如：~1.2.3）会匹配对应软件所有的 1.2.x 版本，并最终使用最新的符合要求的版本；相比之下倒 V 型编号（例如：^1.2.3）有更松弛的规则，所有 1.x.x 版本均在匹配列表中，但匹配过程会在 2.0.0 停止并返回最新的符合要求的版本。
+
+#### 3. 介绍下依赖注入
+
+TBD
 
 ## 浏览器
 
@@ -635,5 +820,6 @@ UDP协议
 * <http://web.jobbole.com/84826/>
 * <http://web.jobbole.com/85340/>
 * <http://blog.csdn.net/i10630226/article/details/54880363>
+* <http://www.ruanyifeng.com/blog/2015/04/generator.html>
 
 文章参考了以上资源，同时参照 <https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers> 的部分问题列表重新归纳了详细问题答案。
