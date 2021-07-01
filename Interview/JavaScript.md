@@ -384,3 +384,23 @@ WebAssembly.compile(new Uint8Array(`
 
 })
 ```
+
+#### 20. 简单介绍下 WebSocket 技术与示例？
+
+```javascript
+const ws = new WebSocket("wss://echo.websocket.org");
+
+ws.onopen = function(evt) { 
+  console.log("Connection open ..."); 
+  ws.send("Hello WebSockets!");
+};
+
+ws.onmessage = function(evt) {
+  console.log( "Received Message: " + evt.data);
+  ws.close();
+};
+
+ws.onclose = function(evt) {
+  console.log("Connection closed.");
+};      
+```
