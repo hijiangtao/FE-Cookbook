@@ -596,6 +596,26 @@ ES6 模块的运行机制与 CommonJS 不一样，它遇到模块加载命令 im
 
 TBD
 
+#### 19. WebAssembly 例子
+
+```javascript
+WebAssembly.compile(new Uint8Array(`
+  00 61 73 6d  01 00 00 00  01 0c 02 60  02 7f 7f 01
+  7f 60 01 7f  01 7f 03 03  02 00 01 07  10 02 03 61
+  64 64 00 00  06 73 71 75  61 72 65 00  01 0a 13 02
+  08 00 20 00  20 01 6a 0f  0b 08 00 20  00 20 00 6c
+  0f 0b`.trim().split(/[\s\r\n]+/g).map(str => parseInt(str, 16))
+)).then(module => {
+  const instance = new WebAssembly.Instance(module)
+  const { add, square } = instance.exports
+
+  console.log('2 + 4 =', add(2, 4))
+  console.log('3^2 =', square(3))
+  console.log('(2 + 5)^2 =', square(add(2 + 5)))
+
+})
+```
+
 ## TypeScript
 
 #### 1. interface 和 type 的区别
@@ -652,6 +672,7 @@ type User = Name & {
 **不同点**
 
 type 可以而 interface 不行
+
 1. type 可以声明基本类型别名，联合类型，元组等类型
 2. type 语句中还可以使用 typeof 获取实例的类型进行赋值
 
@@ -678,6 +699,7 @@ type B = typeof div
 ```
 
 interface 可以而 type 不行
+
 1. interface 能够声明合并
 
 ```typescript
@@ -698,6 +720,11 @@ User 接口为 {
 }
 */
 ```
+
+#### 2. 如何实现一个 typeguard
+
+#### 3. 
+
 
 ## CSS
 
