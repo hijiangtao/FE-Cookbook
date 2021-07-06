@@ -10,69 +10,35 @@
 
 ## Outline / 目录
 
-* [JavaScript](#javascript) - JavaScript 相关的知识汇总，包括读书笔记、知识点整理和语言实现细节等；
-* [TypeScript](#typescript) - TBD
-* [HTML](#html) - HTML 语言规范、读书笔记与新兴 API 介绍；
-* [CSS](#css) - CSS 语言规范、读书笔记与专题讲解等；
-* [Node.js](#nodejs) - NodeJS 相关技术细节与实现、读书笔记等；
-* [Tools & Codes](#tools--codes) - Web 开发前沿技术与工程打包细节等内容整理；
+* 读书笔记与计算机书籍
+* 基础概念与常用框架
+* 构建流程与技术文章
 * [QA](#qa) - 校招/社招前端笔试面试题汇总，计划纳入上百道题，正在持续更新中；
 * [LeetCodeOJ](https://github.com/hijiangtao/LeetCodeOJ) - 用 JavaScript 刷算法题的一个项目集锦；
 
 ----
 
-## JavaScript
+## 读书笔记与计算机书籍
 
-* [知识点框架](./) - TBD
-* [JavaScript 高级程序设计笔记](./JavaScript.md): 根据《JavaScript 高级程序设计》一书整理的知识点，将 JavaScript 及浏览器等相关内容梳理了一遍。
-* [You Don't Know JS 章节要点整理](./YDKJS.md): 《You Don't Know JS》一书共六本，根据每个章节总结的知识点进行罗列，可以快速阅览 JavaScript 不为人知的一些设计细节，中文书籍见 [GitBook](https://hijiangtao.gitbook.io/ydkjs/)。
-* [面试题](./Tricks.md)
+| 类别       | 读书笔记名称                                                                                                                                  | 备注 |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------|------|
+| HTML       | [HTML5高级程序设计读书笔记](./HTML.md): 根据《HTML5高级程序设计》一书整理的有关 HTML5 新兴 API 相关的知识点。|      |
+| CSS        | [CSS3 知识点整理](./CSS3.md) |      |
+| JavaScript | [JavaScript 高级程序设计笔记](./JavaScript.md): 根据《JavaScript 高级程序设计》一书整理的知识点，将 JavaScript 及浏览器等相关内容梳理了一遍。 |      |
+| JavaScript | [You Don't Know JS 章节要点整理](./YDKJS.md): 《You Don't Know JS》一书共六本，根据每个章节总结的知识点进行罗列，可以快速阅览 JavaScript 不为人知的一些设计细节，中文书籍见 [GitBook](https://hijiangtao.gitbook.io/ydkjs/)。 |      |
+| Node.js    | [深入理解 Node.js：核心思想与源码分析](https://yjhjstz.gitbooks.io/deep-into-node/content/) |      |
+| JavaScript | [Google 官方 PWA 天气预报程序代码](./PWA/) - 根据 Google 官方教程指导实现的天气预报 PWA 程序代码 | |
+| Docker | [Docker 核心技术与实现原理](https://draveness.me/docker) | |
+| 数据库 | [关系型数据库工作原理](http://blog.jobbole.com/100349/) ||
 
-## TypeScript
+## 基础概念与常用框架
 
-* [面试题](./Tricks.md)
-
-## HTML
-
-* [知识点框架](./) - TBD
-* [HTML5高级程序设计读书笔记](./HTML.md): 根据《HTML5高级程序设计》一书整理的有关 HTML5 新兴 API 相关的知识点。
-* [面试题](./Tricks.md)
-
-### 关键概念
+### 基础概念
 
 * [World Wide Web](https://en.wikipedia.org/wiki/World_Wide_Web)
 * [渲染性能](https://developers.google.com/web/fundamentals/performance/rendering/)
 
-## CSS
-
-* [知识点框架](./) - TBD
-* [面试题](./Tricks.md)
-
-### CSS3
-
-* [CSS3 知识点整理](./CSS3.md)
-* [面试题](./Tricks.md)
-
-### 关键概念
-
-* [学习 CSS 布局](http://zh.learnlayout.com/)
-* [深入理解 CSS3 弹性盒布局模型](https://www.ibm.com/developerworks/cn/web/1409_chengfu_css3flexbox/)
-* [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) - MDN
-* [移动端 1px 细线解决方案总结](http://www.cnblogs.com/lunarorbitx/p/5287309.html)
-* [CSS像素、物理像素、逻辑像素、设备像素比、PPI、Viewport](https://github.com/jawil/blog/issues/21)
-* [学习使用：before和：after伪元素](http://www.w3cplus.com/css3/learning-to-use-the-before-and-after-pseudo-elements-in-css.html)
-* [Android 浏览器文本垂直居中问题](http://imweb.io/topic/5848d0fc9be501ba17b10a94)
-
-## Node.js
-
-* [知识点框架](./) - TBD
-* [深入浅出 NodeJs 读书笔记](./Node.md)：完善中
-* [深入理解 Node.js：核心思想与源码分析](https://yjhjstz.gitbooks.io/deep-into-node/content/)
-* [面试题](./Tricks.md)
-
-## Tools & Codes
-
-* [面试题](./Tricks.md)
+## 构建流程与技术文章
 
 ### 知识点框架
 
@@ -152,7 +118,7 @@
 * [Webpack Visualizer](https://chrisbateman.github.io/webpack-visualizer/)
 * [Source Map Explorer](https://github.com/danvk/source-map-explorer)
 
-### Web 开发打包与未来技术
+### 打包与构建
 
 * [webpack](http://webpack.github.io/) | [webpack 学习与起步教程](./config/webpack.md) | [webpack 配置文件样例](./config/webpack.config.js)
 * [JSLint](http://www.jslint.com/) - The JavaScript Code Quality Tool
@@ -161,6 +127,16 @@
 * Dependency injection
   - [Dependency injection in JavaScript](https://krasimirtsonev.com/blog/article/Dependency-injection-in-JavaScript)
   - [控制反转](https://zh.wikipedia.org/wiki/%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC)
+
+### CSS 相关文章
+
+* [学习 CSS 布局](http://zh.learnlayout.com/)
+* [深入理解 CSS3 弹性盒布局模型](https://www.ibm.com/developerworks/cn/web/1409_chengfu_css3flexbox/)
+* [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) - MDN
+* [移动端 1px 细线解决方案总结](http://www.cnblogs.com/lunarorbitx/p/5287309.html)
+* [CSS像素、物理像素、逻辑像素、设备像素比、PPI、Viewport](https://github.com/jawil/blog/issues/21)
+* [学习使用：before和：after伪元素](http://www.w3cplus.com/css3/learning-to-use-the-before-and-after-pseudo-elements-in-css.html)
+* [Android 浏览器文本垂直居中问题](http://imweb.io/topic/5848d0fc9be501ba17b10a94)
 
 ### 会议
 
@@ -175,19 +151,48 @@
 * WebAssembly 系列（五）[为什么 WebAssembly 更快](https://zhuanlan.zhihu.com/p/25773367)
 * WebAssembly 系列（六）[WebAssembly 的现在与未来](https://zhuanlan.zhihu.com/p/25799683)
 
-### 示例代码
+## 算法与面试题
 
-* [Google 官方 PWA 天气预报程序代码](./PWA/) - 根据 Google 官方教程指导实现的天气预报 PWA 程序代码
+### 面试题汇总
 
-## QA
+由于从校招实习到校招提前批，一直在学习前端相关的基础知识并针对具体遇到的细节进行查漏补缺，零零散散发现很多内容值得反复回顾，所以将自己看到过认为还比较经典的题目汇总到这里，供大家参考。欢迎有兴趣的同学一起建设该部分，针对你擅长的部分添加问题与回答并提请 PR，问题格式参考各细分文件。
 
-* [校招/社招前端笔试面试百题汇总](./Tricks.md)：由于从校招实习到校招提前批，一直在学习前端相关的基础知识并针对具体遇到的细节进行查漏补缺，零零散散发现很多内容值得反复回顾，所以将自己看到过认为还比较经典的题目汇总到这里，供大家参考。
-* [用 JavaScript 刷 LeetCode](https://github.com/hijiangtao/LeetCodeOJ)
+本部分内容大致分为以下几个方面：
 
-## 计算机科学技术文章
+| 类别       | 面试题地址                          | 内容 |
+|------------|-------------------------------------|------------|
+| HTML       | [面试题](./Interview/HTML.md)       ||
+| CSS        | [面试题](./Interview/CSS.md)        ||
+| JavaScript | [面试题](./Interview/JavaScript.md) ||
+| TypeScript | [面试题](./Interview/TypeScript.md) ||
+| Node.js    | [面试题](./Interview/Node.md)       ||
+| HTTP       | [面试题](./Interview/HTTP.md)       ||
+| Linux      | [面试题](./Interview/Linux.md)      ||
+| Angular    | [面试题](./Interview/Angular.md)    ||
 
-* [Docker 核心技术与实现原理](https://draveness.me/docker)
-* [关系型数据库工作原理](http://blog.jobbole.com/100349/)
+本部分面试题在整理过程中有参考自如下内容源：
+
+* <https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers>
+* <https://sites.google.com/site/amitsciscozone/home/security/ssl-connection-setup>
+* <http://robertheaton.com/2014/03/27/how-does-https-actually-work/>
+* <http://www.cnblogs.com/lixiansen/p/5618541.html>
+* <http://harttle.com/2016/01/22/doctype.html>
+* <http://jerryzou.com/posts/cookie-and-web-storage/>
+* <https://www.zhihu.com/question/20653055/answer/17786008>
+* <https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes>
+* <http://blog.csdn.net/NJUPT_T/article/details/50700209>
+* <http://web.jobbole.com/84826/>
+* <http://web.jobbole.com/85340/>
+* <http://blog.csdn.net/i10630226/article/details/54880363>
+* <http://www.ruanyifeng.com/blog/2015/04/generator.html>
+* <https://hijiangtao.github.io/2019/08/31/Webpack-Basic-Concepts/>
+* <https://hijiangtao.github.io/2019/12/01/Introduction-of-webpack-plugin/>
+* <https://developer.mozilla.org/zh-CN/docs/WebAssembly/Concepts>
+* <http://www.ruanyifeng.com/blog/2017/05/websocket.html>
+
+### LeetCode
+
+[用 JavaScript 刷 LeetCode](https://github.com/hijiangtao/LeetCodeOJ)
 
 ## Contribute
 
