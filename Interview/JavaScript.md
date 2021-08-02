@@ -2,7 +2,7 @@
 
 #### 1. ECMAScript/JavaScript 中都有那些数据类型？
 
-**答**：ECMAScript中5种简单数据类型（基本数据类型）: Undefined、Null、Boolean、Number和String, 1种复杂数据类型: Object.
+**答**：ECMAScript中6种原始数据类型（基本数据类型）: Undefined、Boolean、Number、String、Symbol、BigInt, 2种复杂数据类型: Null、Object.
 
 #### 2. 把非数值转化为数值的函数都有哪些？
 
@@ -263,6 +263,12 @@ g.next() // { value: undefined, done: true }
 
 换言之，next 方法的作用是分阶段执行 Generator 函数。每次调用 next 方法，会返回一个对象，表示当前阶段的信息（ value 属性和 done 属性）。value 属性是 yield 语句后面表达式的值，表示当前阶段的值；done 属性是一个布尔值，表示 Generator 函数是否执行完毕，即是否还有下一个阶段。
 
+拓展
+
+* 配合解释协程的定义
+* 如何在 generator 中处理异常
+* generator 在 koa 中的实际运用
+
 #### 16. 各类模块化加载方案介绍
 
 答：CommonJS、AMD、CMD、UMD、ES Modules，参考 [JavaScript 模块化方案总结](https://hijiangtao.github.io/2019/08/25/JavaScript-Module-Definitions-and-Webpack-Configurations-Notes/)
@@ -361,10 +367,15 @@ ES6 模块的运行机制与 CommonJS 不一样，它遇到模块加载命令 im
 
 参考 <http://www.ruanyifeng.com/blog/2015/11/circular-dependency.html>，代码示例见 <https://nodejs.org/api/modules.html#modules_cycles>
 
-#### 18. 什么是装饰器模式
+#### 18. 装饰器模式的适用场景
 
-TBD
+如果你希望在无需修改代码的情况下即可使用对象， 且希望在运行时为对象新增额外的行为， 可以使用装饰模式。
 
+装饰能将业务逻辑组织为层次结构， 你可为各层创建一个装饰， 在运行时将各种不同逻辑组合成对象。 由于这些对象都遵循通用接口， 客户端代码能以相同的方式使用这些对象。
+
+如果用继承来扩展对象行为的方案难以实现或者根本不可行， 你可以使用该模式。
+
+许多编程语言使用 final 最终关键字来限制对某个类的进一步扩展。 复用最终类已有行为的唯一方法是使用装饰模式： 用封装器对其进行封装。
 #### 19. WebAssembly 例子
 
 ```javascript
@@ -404,3 +415,63 @@ ws.onclose = function(evt) {
   console.log("Connection closed.");
 };      
 ```
+
+#### 21. var/let/const 的区别
+
+* var声明是全局作用域或函数作用域，而let和const是块作用域。
+* var变量可以在其范围内更新和重新声明； let变量可以被更新但不能重新声明； const变量既不能更新也不能重新声明。
+* 它们都被提升到其作用域的顶端。 但是，虽然使用变量undefined初始化了var变量，但未初始化let和const变量。
+* 尽管可以在不初始化的情况下声明var和let，但是在声明期间必须初始化const。
+
+#### 22. MVVM 与 MVC、MVP 的区别
+
+MVVM与MVC最大的区别就是：它实现了View和Model的自动同步，也就是当Model的属性改变时，我们不用再自己手动操作Dom元素，来改变View的显示，而是改变属性后该属性对应View层显示会自动改变。
+
+mvvm模式将Presener改名为View Model，基本上与MVP模式完全一致，唯一的区别是，它采用双向绑定(data-binding): View的 变动，自动反映在View Model，反之亦然。这样开发者就不用处理接收事件和View更新的工作，框架已经帮你做好了。
+
+#### 23. Promise 与 async/await 的区别
+
+JavaScript 中的 async 函数返回的是一个 Promise 对象。相比之下，async/await 在 then 调用链上会更便捷。在实现上，async/await 是 Generator 的语法糖，async 函数的实现，就是将 Generator 函数和自动执行器，包装在一个函数里。
+
+#### 24. 什么是函数柯里化？
+
+柯里化（Currying）是一种关于函数的高阶技术。它不仅被用于 JavaScript，还被用于其他编程语言。柯里化是一种函数的转换，它是指将一个函数从可调用的 f(a, b, c) 转换为可调用的 f(a)(b)(c)。柯里化不会调用函数。它只是对函数进行转换。
+
+我们来看一个例子：
+
+```
+function curry(func) {
+
+  return function curried(...args) {
+    if (args.length >= func.length) {
+      return func.apply(this, args);
+    } else {
+      return function(...args2) {
+        return curried.apply(this, args.concat(args2));
+      }
+    }
+  };
+}
+```
+
+如下为用例：
+
+```
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+let curriedSum = curry(sum);
+
+alert( curriedSum(1, 2, 3) ); // 6，仍然可以被正常调用
+alert( curriedSum(1)(2,3) ); // 6，对第一个参数的柯里化
+alert( curriedSum(1)(2)(3) ); // 6，全柯里化
+```
+
+#### 25. 什么是函数式编程？
+
+TBD
+
+#### 26. 什么是响应式编程？
+
+TBD
