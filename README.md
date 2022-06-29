@@ -42,11 +42,12 @@
 
 ### 知识点框架
 
-* [webpack](./) - TBD
-* [Vue](./) - TBD
-* [React](./) - TBD
-* [Angular](./) - TBD
-* [RxJS](./) - TBD
+* webpack - TBD
+* Vue - TBD
+* React - TBD
+* Angular - TBD
+* RxJS - TBD
+* TypeScript - TBD
 
 ### 前端相关基础技术文章
 
